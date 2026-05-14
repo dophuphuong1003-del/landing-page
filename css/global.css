@@ -1,0 +1,131 @@
+/* ============================================================
+   GLOBAL.CSS – PRINTPACK Design System
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold      : #C8972A;
+  --gold-light: #E4B84A;
+  --gold-pale : #FDF6E3;
+  --navy      : #1A2B4A;
+  --navy-light: #243660;
+  --dark      : #1E1E1E;
+  --mid       : #555;
+  --muted     : #999;
+  --border    : #E8E8E8;
+  --light     : #F8F8F6;
+  --white     : #FFFFFF;
+  --green     : #3a7d44;
+
+  --font-body   : 'Be Vietnam Pro', sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  --radius  : 8px;
+  --radius-lg: 16px;
+  --shadow  : 0 4px 24px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,.14);
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+a   { text-decoration: none; color: inherit; }
+
+section { padding: 72px 6vw; }
+
+.container { max-width: 1180px; margin: 0 auto; }
+
+/* ── SECTION HEADERS ── */
+.sec-label {
+  font-size: .75rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .5rem;
+}
+.sec-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800; color: var(--dark); line-height: 1.2;
+}
+.sec-title .gold { color: var(--gold); }
+.sec-center { text-align: center; margin-bottom: 3rem; }
+
+/* ── BUTTONS ── */
+.btn-gold {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--gold); color: var(--white);
+  padding: .75rem 1.8rem; border-radius: var(--radius);
+  font-weight: 700; font-size: .9rem; border: none; cursor: pointer;
+  transition: all var(--transition); white-space: nowrap;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,151,42,.35); }
+
+.btn-outline-navy {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: transparent; color: var(--navy);
+  padding: .75rem 1.8rem; border-radius: var(--radius);
+  font-weight: 600; font-size: .9rem;
+  border: 2px solid var(--navy); cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left  { opacity: 0; transform: translateX(-32px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-right { opacity: 0; transform: translateX(32px);  transition: opacity .65s ease, transform .65s ease; }
+.reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* ── FLOATING BUTTONS ── */
+.float-actions {
+  position: fixed; bottom: 1.5rem; right: 1.5rem;
+  z-index: 300; display: flex; flex-direction: column; gap: .6rem;
+}
+.float-btn {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  transition: transform var(--transition);
+  cursor: pointer;
+}
+.float-btn:hover { transform: scale(1.1); }
+.float-phone-btn { background: var(--gold); color: var(--white); animation: pulse-gold 2s infinite; }
+.float-zalo-btn  { background: #0068FF; color: var(--white); }
+
+@keyframes pulse-gold {
+  0%,100% { box-shadow: 0 4px 16px rgba(200,151,42,.4); }
+  50%     { box-shadow: 0 4px 28px rgba(200,151,42,.7); }
+}
+
+/* ── CUSTOM CURSOR ── */
+#cursor {
+  width: 12px; height: 12px; background: var(--gold); border-radius: 50%;
+  position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: width .2s, height .2s, background .2s;
+  mix-blend-mode: multiply;
+}
+#cursor.hovered { width: 32px; height: 32px; background: var(--gold-light); opacity: .7; }
+
+/* ── DIVIDER ── */
+.gold-line { width: 48px; height: 3px; background: var(--gold); margin: .8rem 0 1.4rem; border-radius: 2px; }
+.gold-line.center { margin-left: auto; margin-right: auto; }
+
+/* ── RESPONSIVE HELPERS ── */
+@media (max-width: 768px) {
+  section { padding: 52px 5vw; }
+  .float-actions { bottom: 1rem; right: 1rem; }
+}
