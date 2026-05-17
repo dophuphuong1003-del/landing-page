@@ -13,7 +13,7 @@ const Navbar = (() => {
       <div class="nav-inner">
 
         <a href="#hero" class="nav-logo">
-          <img src="../static/logo_DMT.png" alt="DEMETER" class="logo-nav" />
+          <img src="/static/logo_DMT.png" alt="DEMETER" class="logo-nav" />
         </a>
 
         <ul class="nav-links" id="navLinks">${links}</ul>
