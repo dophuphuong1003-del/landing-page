@@ -208,7 +208,7 @@ const PROCESS_STEPS = [
 
 const PROJECTS = [
   { 
-    image: "public/static/project/Cà phê hòa tan UFO.jpg",
+    image: "public/static/project/ca_phe_hoa_tan_UFO.jpg",
     name: "Cà phê hòa tan UFO",
     color: "#fce4f0"
   },
