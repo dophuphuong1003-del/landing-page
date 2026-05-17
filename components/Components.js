@@ -67,7 +67,7 @@ const Solutions = (() => {
     <section id="solutions">
       <div class="solutions-inner container">
       <img
-          src="../static/DMTGiaiPhap.jpg"
+          src="public/static/DMTGiaiPhap.jpg"
           alt="giai phap"
           class="hero-banner"
         />
