@@ -803,7 +803,7 @@ const Footer = (() => {
         <div class="footer-brand">
           <div class="footer-logo-row">
              <a href="#hero" class="nav-logo">
-          <img src="../static/logo_DMT.png" alt="DEMETER" class="logo-nav" />
+          <img src="public/static/logo_dmt.png" alt="DEMETER" class="logo-nav" />
         </a>
             
           </div>
