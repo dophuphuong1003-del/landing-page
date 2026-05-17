@@ -1,0 +1,100 @@
+/* ==================PARTNERS=========== */
+
+#partners{
+  padding:90px 0;
+  background:#fff;
+  overflow:hidden;
+}
+
+.partners-slider{
+  position:relative;
+  overflow:hidden;
+  margin-top:26px;
+}
+
+.partners-track{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  width:max-content;
+}
+
+.partners-track-left{
+  animation: partnerLeft 30s linear infinite;
+}
+
+.partners-track-right{
+  animation: partnerRight 35s linear infinite;
+}
+
+.partners-slider:hover .partners-track{
+  animation-play-state:paused;
+}
+
+@keyframes partnerLeft{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+@keyframes partnerRight{
+  from{
+    transform:translateX(-50%);
+  }
+  to{
+    transform:translateX(0);
+  }
+}
+
+/* CARD */
+.partner-logo-card{
+  width:220px;
+  height:120px;
+
+  flex-shrink:0;
+
+  background:#fff;
+
+  border-radius:22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px;
+
+  border:1px solid rgba(0,0,0,.06);
+
+  box-shadow:0 10px 28px rgba(0,0,0,.05);
+
+  transition:.3s ease;
+}
+
+.partner-logo-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 40px rgba(0,0,0,.1);
+}
+
+.partner-logo-img{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .partner-logo-card{
+    width:160px;
+    height:90px;
+  }
+
+}
+.gold-line.center{
+  margin:0 auto;
+  color: black;
+}

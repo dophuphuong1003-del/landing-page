@@ -7,23 +7,25 @@ const Navbar = (() => {
     const links = NAV_LINKS.map(l =>
       `<li><a href="${l.href}">${l.label}</a></li>`
     ).join('');
+
     return `
     <nav id="navbar">
       <div class="nav-inner">
+
         <a href="#hero" class="nav-logo">
-          <div class="nav-logo-icon">📦</div>
-          <div class="nav-logo-text">
-            <div class="nav-logo-name">${CONFIG.companyName}</div>
-            <div class="nav-logo-sub">${CONFIG.slogan}</div>
-          </div>
+          <img src="../static/logo_DMT.png" alt="DEMETER" class="logo-nav" />
         </a>
+
         <ul class="nav-links" id="navLinks">${links}</ul>
+
         <a href="tel:${CONFIG.phone.replace(/\s/g,'')}" class="nav-phone">
           📞 ${CONFIG.phone}
         </a>
+
         <div class="nav-hamburger" id="navHamburger">
           <span></span><span></span><span></span>
         </div>
+
       </div>
     </nav>`;
   }

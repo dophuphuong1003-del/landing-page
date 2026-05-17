@@ -12,6 +12,7 @@ const App = (() => {
     Solutions,
     BoxTypes,
     Materials,
+    Partners,
     Process,
     Projects,
 /*    Contact,*/

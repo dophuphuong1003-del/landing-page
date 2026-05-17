@@ -2,22 +2,55 @@
 //  components/PainPoints.js
 // ============================================================
 const PainPoints = (() => {
+
   function render() {
+
     const items = PAIN_POINTS.map(p => `
+
       <div class="pain-item reveal">
-        <div class="pain-icon-wrap">${p.icon}</div>
-        <p class="pain-text">${p.text}</p>
-      </div>`).join('');
+
+        <div class="pain-icon-wrap">
+
+          <img
+            src="${p.image}"
+            alt="${p.text}"
+            class="pain-icon-img"
+          />
+
+        </div>
+
+        <p class="pain-text">
+          ${p.text}
+        </p>
+
+      </div>
+
+    `).join('');
+
     return `
     <section id="pain">
+
       <div class="container">
-        <p class="pain-title">Bạn đang gặp những <strong>vấn đề này?</strong></p>
-        <div class="pain-grid">${items}</div>
+
+        <p class="pain-title">
+          Bạn đang gặp những
+          <strong> vấn đề này?</strong>
+        </p>
+
+        <div class="pain-grid">
+          ${items}
+        </div>
+
       </div>
-    </section>`;
+
+    </section>
+    `;
   }
-  function init() {}
+
+  function init(){}
+
   return { render, init };
+
 })();
 
 // ============================================================
@@ -33,13 +66,11 @@ const Solutions = (() => {
     return `
     <section id="solutions">
       <div class="solutions-inner container">
-
-        <div class="solutions-img-grid reveal-left">
-          <div class="sol-img-box" style="background:linear-gradient(135deg,#1a2b4a,#243660);color:white;font-size:3.5rem">🏭</div>
-          <div class="sol-img-box" style="background:linear-gradient(135deg,#fce4f0,#f9d6e8);font-size:2.5rem">💄</div>
-          <div class="sol-img-box" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);font-size:2.5rem">📦</div>
-        </div>
-
+      <img
+          src="../static/DMTGiaiPhap.jpg"
+          alt="giai phap"
+          class="hero-banner"
+        />
         <div class="reveal-right">
           <div class="sec-label">Giải Pháp Từ</div>
           <h2 class="sec-title">${CONFIG.companyName}</h2>
@@ -54,84 +85,534 @@ const Solutions = (() => {
   return { render, init };
 })();
 
+
 // ============================================================
 //  components/BoxTypes.js
 // ============================================================
 const BoxTypes = (() => {
+
   function render() {
+
+    /* LEFT CONTENT */
     const cards = BOX_TYPES.map(b => `
       <div class="box-type-card reveal">
-        <div class="box-type-img" style="background:${b.color}">${b.icon}</div>
-        <div class="box-type-name">${b.label}</div>
-      </div>`).join('');
+
+        <div class="box-type-icon">
+          ${b.icon}
+        </div>
+
+        <div class="box-type-name">
+          ${b.label}
+        </div>
+
+      </div>
+    `).join('');
+
+    /* RIGHT FEATURED */
+    const featured = FEATURED_PRODUCTS.map(b => `
+      <div
+        class="featured-product-card open-image-popup"
+        data-image="${b.image}"
+        data-name="${b.name}"
+      >
+
+        <img
+          src="${b.image}"
+          alt="${b.name}"
+          class="featured-product-image"
+        />
+
+        <div class="featured-product-overlay">
+          <div class="featured-product-title">
+            ${b.name}
+          </div>
+        </div>
+
+      </div>
+    `).join('');
+
+    /* POPUP PRODUCTS */
+    const popupProducts = FEATURED_PRODUCTS.map(p => `
+      <div
+        class="popup-product-card open-image-popup"
+        data-image="${p.image}"
+        data-name="${p.name}"
+      >
+
+        <img
+          src="${p.image}"
+          alt="${p.name}"
+          class="popup-product-image"
+        />
+
+        <div class="popup-product-name">
+          ${p.name}
+        </div>
+
+      </div>
+    `).join('');
+
     return `
     <section id="boxtypes">
-      <div class="sec-center reveal">
-        <h2 class="sec-title">Các Loại Hộp Giấy Mềm <span class="gold">Chúng Tôi Nhận In</span></h2>
-        <div class="gold-line center"></div>
+
+      <div class="boxtype-layout container">
+
+        <!-- LEFT -->
+        <div class="boxtype-left">
+
+          <div class="sec-center reveal">
+
+            <h2 class="sec-title">
+              Các Loại Hộp Giấy Mềm
+              <span class="gold-text">
+                Chúng Tôi Nhận In
+              </span>
+            </h2>
+
+          </div>
+
+          <div class="boxtypes-grid">
+            ${cards}
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="boxtype-right">
+
+          <div class="featured-header">
+
+            <div class="featured-title">
+              Sản phẩm nổi bật
+            </div>
+
+            <button
+              class="view-all-btn"
+              id="openProductsPopup"
+            >
+              Xem tất cả
+            </button>
+
+          </div>
+
+          <div class="featured-products">
+
+            <div class="featured-track">
+              ${featured}
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="boxtypes-grid container">${cards}</div>
-      <div class="boxtypes-more">
-        
+
+      <!-- PRODUCTS POPUP -->
+      <div class="products-popup" id="productsPopup">
+
+        <div class="products-popup-overlay"></div>
+
+        <div class="products-popup-content">
+
+          <div class="products-popup-top">
+
+            <h3>
+              Sản Phẩm Nổi Bật Của Chúng Tôi
+            </h3>
+
+            <button
+              class="popup-close"
+              id="closeProductsPopup"
+            >
+              ✕
+            </button>
+
+          </div>
+
+          <div class="products-popup-grid">
+            ${popupProducts}
+          </div>
+
+        </div>
+
       </div>
-    </section>`;
+
+      <!-- IMAGE VIEWER -->
+      <div class="image-viewer-popup" id="imageViewerPopup">
+
+        <div class="image-viewer-overlay"></div>
+
+        <div class="image-viewer-content">
+
+          <button
+            class="image-viewer-close"
+            id="closeImageViewer"
+          >
+            ✕
+          </button>
+
+          <img
+            src=""
+            alt=""
+            id="viewerImage"
+            class="viewer-image"
+          />
+
+          <div
+            class="viewer-title"
+            id="viewerTitle"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+    `;
   }
   function init() {
-    const slider = document.querySelector('.boxtypes-slider');
-
-  let scrollAmount = 0;
-
-  setInterval(() => {
-    scrollAmount += 270;
-
-    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-      scrollAmount = 0;
+    /* PRODUCTS POPUP */
+    const popup = document.getElementById('productsPopup');
+    const openBtn = document.getElementById('openProductsPopup');
+    const closeBtn = document.getElementById('closeProductsPopup');
+    const overlay = document.querySelector('.products-popup-overlay');
+    if(openBtn){
+      openBtn.addEventListener('click', () => {
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
     }
-
-    slider.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
+    function closePopup(){
+      popup.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    if(closeBtn){
+      closeBtn.addEventListener('click', closePopup);
+    }
+    if(overlay){
+      overlay.addEventListener('click', closePopup);
+    }
+    /* IMAGE VIEWER */
+    const imagePopup = document.getElementById('imageViewerPopup');
+    const viewerImage = document.getElementById('viewerImage');
+    const viewerTitle = document.getElementById('viewerTitle');
+    const closeImageBtn = document.getElementById('closeImageViewer');
+    const imageCards = document.querySelectorAll('.open-image-popup');
+    imageCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const image = card.dataset.image;
+        const name = card.dataset.name;
+        viewerImage.src = image;
+        viewerTitle.innerText = name;
+        imagePopup.classList.add('active');
+      });
     });
-  }, 3000);
+    function closeImagePopup(){
+      imagePopup.classList.remove('active');
+    }
+    if(closeImageBtn){
+      closeImageBtn.addEventListener('click', closeImagePopup);
+    }
+    const imageOverlay = document.querySelector('.image-viewer-overlay');
+    if(imageOverlay){
+      imageOverlay.addEventListener('click', closeImagePopup);
+    }
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape'){
+        closePopup();
+        closeImagePopup();
+      }
+    });
   }
-  return { render, init };
-})();
 
+  return { render, init };
+
+})();
 // ============================================================
 //  components/Materials.js
 // ============================================================
 const Materials = (() => {
-  function render() {
-    const swatches = MATERIALS.map(m => `
-      <div class="mat-swatch">
-        <div class="mat-circle" style="background:${m.bg}"></div>
-        <span class="mat-name">${m.name}</span>
-      </div>`).join('');
 
+  function render() {
+
+    /* =========================================================
+       CHẤT LIỆU
+    ========================================================= */
+    const swatches = MATERIALS.map(m => `
+
+      <div
+        class="mat-swatch open-material-popup"
+        data-images='${JSON.stringify([m.image])}'
+        data-name="${m.name}"
+      >
+
+        <img
+          src="${m.image}"
+          alt="${m.name}"
+          class="mat-circle"
+        />
+
+        <span class="mat-name">
+          ${m.name}
+        </span>
+
+      </div>
+
+    `).join('');
+
+    /* =========================================================
+       GIA CÔNG
+    ========================================================= */
     const finishing = FINISHING.map(f => `
-      <div class="fin-item reveal">
-        <span class="fin-icon">${f.icon}</span>
-        <span class="fin-name">${f.name}</span>
-      </div>`).join('');
+
+      <div
+        class="fin-item reveal open-finishing-popup"
+        data-images='${JSON.stringify(f.images)}'
+        data-name="${f.name}"
+      >
+
+        <span class="fin-icon">
+          ${f.icon}
+        </span>
+
+        <span class="fin-name">
+          ${f.name}
+        </span>
+
+      </div>
+
+    `).join('');
 
     return `
     <section id="materials">
-      <div class="mat-finish-grid container">
-        <div class="reveal">
-          <p class="mat-title">CHẤT LIỆU</p>
-          <div class="materials-row">${swatches}</div>
-        </div>
-        <div class="reveal">
-          <p class="fin-title">GIA CÔNG</p>
-          <div class="finishing-grid">${finishing}</div>
-        </div>
-      </div>
-    </section>`;
-  }
-  function init() {}
-  return { render, init };
-})();
 
+      <div class="mat-finish-grid container">
+
+        <!-- MATERIALS -->
+        <div class="reveal">
+
+          <p class="mat-title">
+            CHẤT LIỆU
+          </p>
+
+          <div class="materials-row">
+            ${swatches}
+          </div>
+
+        </div>
+
+        <!-- FINISHING -->
+        <div class="reveal">
+
+          <p class="fin-title">
+            GIA CÔNG
+          </p>
+
+          <div class="finishing-grid">
+            ${finishing}
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================
+           POPUP
+      ====================================================== -->
+      <div
+        class="material-popup"
+        id="materialPopup"
+      >
+
+        <!-- overlay -->
+        <div class="material-popup-overlay"></div>
+
+        <!-- content -->
+        <div class="material-popup-content">
+
+          <!-- close -->
+          <button
+            class="material-popup-close"
+            id="closeMaterialPopup"
+          >
+            ✕
+          </button>
+
+          <!-- slider -->
+          <div class="material-slider-wrap">
+
+            <!-- PREV -->
+            <button
+              class="material-slider-btn prev"
+              id="materialPrevBtn"
+            >
+              ←
+            </button>
+
+            <!-- IMAGE -->
+            <img
+              src=""
+              id="materialPopupImage"
+              class="material-popup-image"
+              alt=""
+            />
+
+            <!-- NEXT -->
+            <button
+              class="material-slider-btn next"
+              id="materialNextBtn"
+            >
+              →
+            </button>
+
+          </div>
+
+          <!-- title -->
+          <div
+            class="material-popup-title"
+            id="materialPopupTitle"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+    `;
+  }
+
+  function init() {
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+    const popup =
+      document.getElementById('materialPopup');
+    const popupImage =
+      document.getElementById('materialPopupImage');
+    const popupTitle =
+      document.getElementById('materialPopupTitle');
+    const closeBtn =
+      document.getElementById('closeMaterialPopup');
+    const overlay =
+      document.querySelector('.material-popup-overlay');
+    const prevBtn =
+      document.getElementById('materialPrevBtn');
+    const nextBtn =
+      document.getElementById('materialNextBtn');
+    /* =========================================================
+       DATA
+    ========================================================= */
+    let currentImages = [];
+
+    let currentIndex = 0;
+
+    /* =========================================================
+       UPDATE IMAGE
+    ========================================================= */
+    function updateImage(){
+
+      popupImage.src =
+        currentImages[currentIndex];
+
+      /* Ẩn mũi tên nếu chỉ có 1 ảnh */
+      if(currentImages.length <= 1){
+
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+
+      }else{
+
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+
+      }
+
+    }
+
+    /* =========================================================
+       OPEN POPUP
+    ========================================================= */
+    const popupItems = document.querySelectorAll(
+      '.open-material-popup, .open-finishing-popup'
+    );
+
+    popupItems.forEach(item => {
+
+      item.addEventListener('click', () => {
+
+        currentImages =
+          JSON.parse(item.dataset.images);
+
+        currentIndex = 0;
+
+        popupTitle.innerText =
+          item.dataset.name;
+
+        updateImage();
+
+        popup.classList.add('active');
+
+        document.body.style.overflow = 'hidden';
+
+      });
+
+    });
+
+    /* =========================================================
+       NEXT IMAGE
+    ========================================================= */
+    nextBtn.addEventListener('click', () => {
+
+      currentIndex++;
+
+      if(currentIndex >= currentImages.length){
+        currentIndex = 0;
+      }
+
+      updateImage();
+    });
+    /* =========================================================
+       PREV IMAGE
+    ========================================================= */
+    prevBtn.addEventListener('click', () => {
+      currentIndex--;
+      if(currentIndex < 0){
+        currentIndex = currentImages.length - 1;
+      }
+      updateImage();
+    });
+    /* =========================================================
+       CLOSE POPUP
+    ========================================================= */
+    function closePopup(){
+      popup.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    if(closeBtn){
+      closeBtn.addEventListener('click', closePopup);
+    }
+    if(overlay){
+      overlay.addEventListener('click', closePopup);
+    }
+    /* =========================================================
+       KEYBOARD
+    ========================================================= */
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape'){
+        closePopup();
+      }
+      if(e.key === 'ArrowRight'){
+        nextBtn.click();
+      }
+      if(e.key === 'ArrowLeft'){
+        prevBtn.click();
+      }
+    });
+
+  }
+  return { render, init };
+
+})();
 // ============================================================
 //  components/Process.js
 // ============================================================
@@ -168,14 +649,20 @@ const Process = (() => {
 // ============================================================
 const Projects = (() => {
   function render() {
+
     const projCards = PROJECTS.map(p => `
-      <div class="proj-card reveal" style="background:${p.color}">
-        ${p.icon}
-        <div class="proj-card-label">${p.label}</div>
-      </div>`).join('');
+      <div class="proj-card reveal">
+        <img
+          src="${p.image}"
+          alt="${p.label}"
+          class="proj-card-image"
+        />
+        <div class="proj-card-label">
+          ${p.name}
+        </div>
 
-    const stars = '★'.repeat(TESTIMONIALS[0].rating);
-
+      </div>
+    `).join('');
     const brands = BRANDS.map(b =>
       `<span class="brand-tag">${b}</span>`
     ).join('');
@@ -186,30 +673,22 @@ const Projects = (() => {
 
         <!-- Projects -->
         <div>
-          <div class="sec-label reveal">Dự Án Tiêu Biểu</div>
-          <div class="projects-grid">${projCards}</div>
-          <div class="proj-more reveal">
-            <a href="" class="btn-border-gold">Xem Thêm Dự Án →</a>
+          <div class="sec-label reveal">
+            Dự Án Tiêu Biểu
           </div>
-        </div>
 
-        <!-- Testimonials -->
-        <div class="reveal-right">
-          <div class="sec-label">Khách Hàng Nói Về Chúng Tôi</div>
-          <div class="testi-box">
-            <div class="testi-quote-icon">"</div>
-            <div class="testi-stars">${stars}</div>
-            <p class="testi-text">${TESTIMONIALS[0].text}</p>
-            <div class="testi-author">${TESTIMONIALS[0].name}</div>
-            <div class="testi-role">${TESTIMONIALS[0].role}</div>
+          <div class="projects-grid">
+            ${projCards}
           </div>
-          <div class="brands-row">${brands}</div>
+          </div>
         </div>
 
       </div>
     </section>`;
   }
+
   function init() {}
+
   return { render, init };
 })();
 /*
@@ -323,11 +802,10 @@ const Footer = (() => {
         <!-- Brand -->
         <div class="footer-brand">
           <div class="footer-logo-row">
-            <div class="footer-logo-icon">📦</div>
-            <div>
-              <div class="footer-logo-name">${CONFIG.companyName}</div>
-              <div class="footer-logo-sub">${CONFIG.slogan}</div>
-            </div>
+             <a href="#hero" class="nav-logo">
+          <img src="../static/logo_DMT.png" alt="DEMETER" class="logo-nav" />
+        </a>
+            
           </div>
           <p class="footer-desc">Chuyên in hộp giấy mềm cao cấp theo yêu cầu.<br>Đồng hành cùng thương hiệu nâng tầm sản phẩm.</p>
         </div>
@@ -336,9 +814,9 @@ const Footer = (() => {
         <div>
           <p class="footer-col-title">Liên Hệ</p>
           <ul class="footer-info-list">
-            <li>📞 <span>${CONFIG.phone}</span></li>
-            <li>✉️ <span>${CONFIG.email}</span></li>
-            <li>📍 <span>${CONFIG.address}</span></li>
+            <li>📞 <span></span></li>
+            <li>✉️ <span></span></li>
+            <li>📍 <span></span></li>
           </ul>
         </div>
 
@@ -348,8 +826,8 @@ const Footer = (() => {
           <ul class="footer-menu-list">${menuLinks}</ul>
           <p class="footer-ketnoi-title" style="margin-top:1.5rem">Kết Nối</p>
           <div class="social-row">
-            <a href="${CONFIG.facebook}" class="social-btn" target="_blank">📘</a>
-            <a href="https://zalo.me/${CONFIG.zalo}" class="social-btn" target="_blank">💬</a>
+            <a href="https://www.facebook.com/DemeterForBusiness" class="social-btn" target="_blank">📘</a>
+            <a href="https://zalo.me/84352574849" class="social-btn" target="_blank">💬</a>
             <a href="${CONFIG.youtube || '#'}" class="social-btn" target="_blank">▶️</a>
           </div>
         </div>
