@@ -124,7 +124,7 @@ const MATERIALS = [
   },
 
   { 
-    image: "public/static/giấy/Giấy kraft nâu.jpg",
+    image: "public/static/giấy/nau_kraft.jpg",
     name: "Giấy Kraft Nâu",
     color: "#e3f2fd"
   },
@@ -208,19 +208,19 @@ const PROCESS_STEPS = [
 
 const PROJECTS = [
   { 
-    image: "public/static/project/ca_phe_hoa_tan_UFO.jpg",
+    image: "public/static/project/ufo_cafe_hoa_tan.jpg",
     name: "Cà phê hòa tan UFO",
     color: "#fce4f0"
   },
 
   { 
-    image: "public/static/project/Foodovi.png",
+    image: "public/static/project/foodovi_dmt.png",
     name: "Foodovi",
     color: "#e8f5e9"
   },
 
   { 
-    image: "public/static/project/Hộp thức món Tết.jpg",
+    image: "public/static/project/set_qua_tet.jpg",
     name: "Hộp thức món Tết",
     color: "#e3f2fd"
   },
