@@ -10,10 +10,11 @@ const Hero = (() => {
 
         <!-- Banner -->
         <img
-          src="public/static/dmtbanner2.jpg"
+          src="public/static/demeterbannerv2.jpg"
           alt="MyFarm Banner"
           class="hero-banner"
-        />
+         
+        
 
         <!-- Overlay content -->
         <div class="hero-overlay">

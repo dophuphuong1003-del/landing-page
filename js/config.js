@@ -238,14 +238,14 @@ const TESTIMONIALS = [
 const BRANDS = ['Rosé', 'MỘC', 'NAM DƯỢC', 'hebe', 'The Organic'];
 
 const NAV_LINKS = [
-  { label: 'Trang Chủ',           href: '#hero' },
-  { label: 'Giới Thiệu',          href: '#solutions' },
-  { label: 'Sản Phẩm',            href: '#boxtypes' },
-  { label: 'Chất Liệu - Gia Công',href: '#materials' },
-  { label: 'Đối tác',             href: '#partners' },
-  { label: 'Quy Trình',           href: '#process' },
-  { label: 'Dự Án',               href: '#projects' },
-  { label: 'Liên Hệ',             href: '#contact' },
+  { label: 'TRANG CHỦ',           href: '#hero' },
+  { label: 'GIỚI THIỆU',          href: '#solutions' },
+  { label: 'SẢN PHẨM',            href: '#boxtypes' },
+  { label: 'CHẤT LIỆU - GIA CÔNG',href: '#materials' },
+  { label: 'ĐỐI TÁC',             href: '#partners' },
+  { label: 'QUY TRÌNH',           href: '#process' },
+  { label: 'DỰ ÁN',               href: '#projects' },
+  { label: 'LIÊN HỆ',             href: '#contact' },
 ];
 
 const FOOTER_MENU = [

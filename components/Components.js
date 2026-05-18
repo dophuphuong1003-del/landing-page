@@ -52,40 +52,76 @@ const PainPoints = (() => {
   return { render, init };
 
 })();
-
 // ============================================================
 //  components/Solutions.js
 // ============================================================
 const Solutions = (() => {
+
   function render() {
+
     const list = SOLUTIONS.map(s => `
       <li>
         <div class="sol-check">✓</div>
         <span>${s}</span>
-      </li>`).join('');
+      </li>
+    `).join('');
+
     return `
     <section id="solutions">
+
       <div class="solutions-inner container">
-      <img
+
+        <!-- IMAGE -->
+        <img
           src="public/static/giaiphap_dmt.jpg"
           alt="giai phap"
-          class="hero-banner"
+          class="solutions-image"
         />
+
+        <!-- CONTENT -->
         <div class="reveal-right">
-          <div class="sec-label">Giải Pháp Từ</div>
-          <h2 class="sec-title">${CONFIG.companyName}</h2>
+
+          <div class="sec-label">
+            Giải Pháp Từ
+          </div>
+
+          <h2 class="sec-title">
+            ${CONFIG.companyName}
+          </h2>
+
           <div class="gold-line"></div>
-          <ul class="solutions-list">${list}</ul>
+
+          <ul class="solutions-list">
+            ${list}
+          </ul>
+
+          <!-- BUTTON -->
+          <div class="solutions-btn-wrap">
+
+            <a
+              href="https://drive.google.com/file/d/1x-LCc7lhnCofnqQqNwvGqwJOFED4jsQ9/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="solutions-btn"
+            >
+              Xem thêm hồ sơ năng lực 
+            </a>
+
+          </div>
+
         </div>
 
       </div>
-    </section>`;
+
+    </section>
+    `;
   }
-  function init() {}
+
+  function init(){}
+
   return { render, init };
+
 })();
-
-
 // ============================================================
 //  components/BoxTypes.js
 // ============================================================
@@ -93,22 +129,9 @@ const BoxTypes = (() => {
 
   function render() {
 
-    /* LEFT CONTENT */
-    const cards = BOX_TYPES.map(b => `
-      <div class="box-type-card reveal">
-
-        <div class="box-type-icon">
-          ${b.icon}
-        </div>
-
-        <div class="box-type-name">
-          ${b.label}
-        </div>
-
-      </div>
-    `).join('');
-
-    /* RIGHT FEATURED */
+    /* =========================
+       FEATURED SLIDE
+    ========================== */
     const featured = FEATURED_PRODUCTS.map(b => `
       <div
         class="featured-product-card open-image-popup"
@@ -122,16 +145,12 @@ const BoxTypes = (() => {
           class="featured-product-image"
         />
 
-        <div class="featured-product-overlay">
-          <div class="featured-product-title">
-            ${b.name}
-          </div>
-        </div>
-
       </div>
     `).join('');
 
-    /* POPUP PRODUCTS */
+    /* =========================
+       POPUP PRODUCTS GRID
+    ========================== */
     const popupProducts = FEATURED_PRODUCTS.map(p => `
       <div
         class="popup-product-card open-image-popup"
@@ -157,26 +176,6 @@ const BoxTypes = (() => {
 
       <div class="boxtype-layout container">
 
-        <!-- LEFT -->
-        <div class="boxtype-left">
-
-          <div class="sec-center reveal">
-
-            <h2 class="sec-title">
-              Các Loại Hộp Giấy Mềm
-              <span class="gold-text">
-                Chúng Tôi Nhận In
-              </span>
-            </h2>
-
-          </div>
-
-          <div class="boxtypes-grid">
-            ${cards}
-          </div>
-
-        </div>
-
         <!-- RIGHT -->
         <div class="boxtype-right">
 
@@ -195,9 +194,11 @@ const BoxTypes = (() => {
 
           </div>
 
+          <!-- SLIDER -->
           <div class="featured-products">
 
             <div class="featured-track">
+              ${featured}
               ${featured}
             </div>
 
@@ -207,7 +208,9 @@ const BoxTypes = (() => {
 
       </div>
 
-      <!-- PRODUCTS POPUP -->
+      <!-- =====================================
+           PRODUCTS POPUP
+      ====================================== -->
       <div class="products-popup" id="productsPopup">
 
         <div class="products-popup-overlay"></div>
@@ -237,8 +240,13 @@ const BoxTypes = (() => {
 
       </div>
 
-      <!-- IMAGE VIEWER -->
-      <div class="image-viewer-popup" id="imageViewerPopup">
+      <!-- =====================================
+           IMAGE VIEWER
+      ====================================== -->
+      <div
+        class="image-viewer-popup"
+        id="imageViewerPopup"
+      >
 
         <div class="image-viewer-overlay"></div>
 
@@ -270,53 +278,115 @@ const BoxTypes = (() => {
     </section>
     `;
   }
+
   function init() {
-    /* PRODUCTS POPUP */
-    const popup = document.getElementById('productsPopup');
-    const openBtn = document.getElementById('openProductsPopup');
-    const closeBtn = document.getElementById('closeProductsPopup');
-    const overlay = document.querySelector('.products-popup-overlay');
+
+    /* =====================================
+       PRODUCTS POPUP
+    ====================================== */
+    const popup =
+      document.getElementById('productsPopup');
+
+    const openBtn =
+      document.getElementById('openProductsPopup');
+
+    const closeBtn =
+      document.getElementById('closeProductsPopup');
+
+    const overlay =
+      document.querySelector('.products-popup-overlay');
+
     if(openBtn){
+
       openBtn.addEventListener('click', () => {
+
         popup.classList.add('active');
+
         document.body.style.overflow = 'hidden';
+
       });
+
     }
+
     function closePopup(){
+
       popup.classList.remove('active');
+
       document.body.style.overflow = 'auto';
+
     }
+
     if(closeBtn){
+
       closeBtn.addEventListener('click', closePopup);
+
     }
+
     if(overlay){
+
       overlay.addEventListener('click', closePopup);
+
     }
-    /* IMAGE VIEWER */
-    const imagePopup = document.getElementById('imageViewerPopup');
-    const viewerImage = document.getElementById('viewerImage');
-    const viewerTitle = document.getElementById('viewerTitle');
-    const closeImageBtn = document.getElementById('closeImageViewer');
-    const imageCards = document.querySelectorAll('.open-image-popup');
+
+    /* =====================================
+       IMAGE VIEWER
+    ====================================== */
+    const imagePopup =
+      document.getElementById('imageViewerPopup');
+
+    const viewerImage =
+      document.getElementById('viewerImage');
+
+    const viewerTitle =
+      document.getElementById('viewerTitle');
+
+    const closeImageBtn =
+      document.getElementById('closeImageViewer');
+
+    const imageOverlay =
+      document.querySelector('.image-viewer-overlay');
+
+    const imageCards =
+      document.querySelectorAll('.open-image-popup');
+
     imageCards.forEach(card => {
+
       card.addEventListener('click', () => {
+
         const image = card.dataset.image;
+
         const name = card.dataset.name;
+
         viewerImage.src = image;
+
         viewerTitle.innerText = name;
+
         imagePopup.classList.add('active');
+
+        document.body.style.overflow = 'hidden';
+
       });
+
     });
     function closeImagePopup(){
       imagePopup.classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
     if(closeImageBtn){
-      closeImageBtn.addEventListener('click', closeImagePopup);
+      closeImageBtn.addEventListener(
+        'click',
+        closeImagePopup
+      );
     }
-    const imageOverlay = document.querySelector('.image-viewer-overlay');
     if(imageOverlay){
-      imageOverlay.addEventListener('click', closeImagePopup);
+      imageOverlay.addEventListener(
+        'click',
+        closeImagePopup
+      );
     }
+    /* =====================================
+       ESC CLOSE
+    ====================================== */
     document.addEventListener('keydown', (e) => {
       if(e.key === 'Escape'){
         closePopup();
@@ -324,8 +394,10 @@ const BoxTypes = (() => {
       }
     });
   }
-
-  return { render, init };
+  return {
+    render,
+    init
+  };
 
 })();
 // ============================================================
@@ -342,7 +414,7 @@ const Materials = (() => {
 
       <div
         class="mat-swatch open-material-popup"
-        data-images='${JSON.stringify([m.image])}'
+        data-images='${JSON.stringify(m.images || [m.image])}'
         data-name="${m.name}"
       >
 
@@ -371,9 +443,12 @@ const Materials = (() => {
         data-name="${f.name}"
       >
 
-        <span class="fin-icon">
-          ${f.icon}
-        </span>
+        <!-- IMAGE ICON -->
+        <img
+          src="${f.images[0]}"
+          alt="${f.name}"
+          class="fin-image-icon"
+        />
 
         <span class="fin-name">
           ${f.name}
@@ -386,10 +461,12 @@ const Materials = (() => {
     return `
     <section id="materials">
 
-      <div class="mat-finish-grid container">
+      <div class="container">
 
-        <!-- MATERIALS -->
-        <div class="reveal">
+        <!-- =================================================
+             CHẤT LIỆU
+        ================================================== -->
+        <div class="materials-section reveal">
 
           <p class="mat-title">
             CHẤT LIỆU
@@ -401,8 +478,10 @@ const Materials = (() => {
 
         </div>
 
-        <!-- FINISHING -->
-        <div class="reveal">
+        <!-- =================================================
+             GIA CÔNG
+        ================================================== -->
+        <div class="finishing-section reveal">
 
           <p class="fin-title">
             GIA CÔNG
@@ -482,28 +561,35 @@ const Materials = (() => {
   }
 
   function init() {
+
     /* =========================================================
        ELEMENTS
     ========================================================= */
     const popup =
       document.getElementById('materialPopup');
+
     const popupImage =
       document.getElementById('materialPopupImage');
+
     const popupTitle =
       document.getElementById('materialPopupTitle');
+
     const closeBtn =
       document.getElementById('closeMaterialPopup');
+
     const overlay =
       document.querySelector('.material-popup-overlay');
+
     const prevBtn =
       document.getElementById('materialPrevBtn');
+
     const nextBtn =
       document.getElementById('materialNextBtn');
+
     /* =========================================================
        DATA
     ========================================================= */
     let currentImages = [];
-
     let currentIndex = 0;
 
     /* =========================================================
@@ -514,7 +600,7 @@ const Materials = (() => {
       popupImage.src =
         currentImages[currentIndex];
 
-      /* Ẩn mũi tên nếu chỉ có 1 ảnh */
+      /* hide arrows if only 1 image */
       if(currentImages.length <= 1){
 
         prevBtn.style.display = 'none';
@@ -570,46 +656,64 @@ const Materials = (() => {
       }
 
       updateImage();
+
     });
+
     /* =========================================================
        PREV IMAGE
     ========================================================= */
     prevBtn.addEventListener('click', () => {
+
       currentIndex--;
+
       if(currentIndex < 0){
         currentIndex = currentImages.length - 1;
       }
+
       updateImage();
+
     });
+
     /* =========================================================
        CLOSE POPUP
     ========================================================= */
     function closePopup(){
+
       popup.classList.remove('active');
+
       document.body.style.overflow = 'auto';
+
     }
+
     if(closeBtn){
       closeBtn.addEventListener('click', closePopup);
     }
+
     if(overlay){
       overlay.addEventListener('click', closePopup);
     }
+
     /* =========================================================
        KEYBOARD
     ========================================================= */
     document.addEventListener('keydown', (e) => {
+
       if(e.key === 'Escape'){
         closePopup();
       }
+
       if(e.key === 'ArrowRight'){
         nextBtn.click();
       }
+
       if(e.key === 'ArrowLeft'){
         prevBtn.click();
       }
+
     });
 
   }
+
   return { render, init };
 
 })();
@@ -803,7 +907,7 @@ const Footer = (() => {
         <div class="footer-brand">
           <div class="footer-logo-row">
              <a href="#hero" class="nav-logo">
-          <img src="public/static/logo_dmt.png" alt="DEMETER" class="logo-nav" />
+          <img src="public/static/logo_dmt_trang.png" alt="DEMETER" class="logo-nav" />
         </a>
             
           </div>
@@ -814,9 +918,9 @@ const Footer = (() => {
         <div>
           <p class="footer-col-title">Liên Hệ</p>
           <ul class="footer-info-list">
-            <li>📞 <span></span></li>
-            <li>✉️ <span></span></li>
-            <li>📍 <span></span></li>
+            <li>📞0896 549 310 <span></span></li>
+            <li>✉️support@demeter.vn<span></span></li>
+            <li>📍Tầng 1, Toà nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh <span></span></li>
           </ul>
         </div>
 
@@ -827,7 +931,7 @@ const Footer = (() => {
           <p class="footer-ketnoi-title" style="margin-top:1.5rem">Kết Nối</p>
           <div class="social-row">
             <a href="https://www.facebook.com/DemeterForBusiness" class="social-btn" target="_blank">📘</a>
-            <a href="https://zalo.me/84352574849" class="social-btn" target="_blank">💬</a>
+            <a href="https://zalo.me/84896549310" class="social-btn" target="_blank">💬</a>
             <a href="${CONFIG.youtube || '#'}" class="social-btn" target="_blank">▶️</a>
           </div>
         </div>
@@ -840,8 +944,8 @@ const Footer = (() => {
 
     <!-- Floating action buttons -->
     <div class="float-actions">
-      <a href="https://zalo.me/84352574849" target="_blank" class="float-btn float-zalo-btn" title="Zalo">💬</a>
-      <a href="tel:0352574849" class="float-btn float-phone-btn" title="Gọi ngay">📞</a>
+      <a href="https://zalo.me/84896549310" target="_blank" class="float-btn float-zalo-btn" title="Zalo">💬</a>
+      <a href="tel:0896 549 310" class="float-btn float-phone-btn" title="Gọi ngay">📞</a>
     </div>`;
   }
   function init() {}

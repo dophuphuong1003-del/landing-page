@@ -16,7 +16,7 @@ const Footer = (() => {
       </footer>
 
       <!-- Floating call button -->
-      <a href="tel:${CONFIG.phone}" class="float-phone" title="Gọi Ngay">📞</a>`;
+      <a href="tel:${CONFIG.phone}" class="float-phone" title="Gọi Ngay">📞 </a>`;
   }
 
   function init() {}

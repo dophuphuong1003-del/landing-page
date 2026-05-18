@@ -19,7 +19,7 @@ const Navbar = (() => {
         <ul class="nav-links" id="navLinks">${links}</ul>
 
         <a href="tel:${CONFIG.phone.replace(/\s/g,'')}" class="nav-phone">
-          📞 ${CONFIG.phone}
+          📞 0896 549 310
         </a>
 
         <div class="nav-hamburger" id="navHamburger">

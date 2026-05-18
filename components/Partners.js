@@ -46,7 +46,7 @@ const Partners = (() => {
         <div class="sec-center reveal">
 
           <h2 class="sec-title">
-            Đơn vị
+            Đơn Vị
             <span class="gold-text">
               Đồng Hành
             </span>

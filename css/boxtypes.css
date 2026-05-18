@@ -1,3 +1,4 @@
+
 .boxtypes-grid{
   display:flex;
   flex-wrap:wrap;
@@ -59,6 +60,7 @@
   width: 100%;
   position: relative;
 }
+
 
 .featured-track{
   display: flex;
