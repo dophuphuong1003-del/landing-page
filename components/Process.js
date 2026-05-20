@@ -4,7 +4,7 @@
 // ============================================================
 const QuyTrinh = (() => {
 
-  function _step({ num, img, alt, title, desc }) {
+  function _step({ num, img, alt, title, desc,desc2,desc3 }) {
     return `
       <div class="qt-step reveal">
         <div class="qt-img-wrap">
@@ -23,6 +23,8 @@ const QuyTrinh = (() => {
         <div class="qt-step-body">
           <p class="qt-step-title">${title}</p>
           <p class="qt-step-desc">${desc}</p>
+          <p class="qt-step-desc">${desc2}</p>
+          <p class="qt-step-desc">${desc3}</p>
         </div>
       </div>`;
   }

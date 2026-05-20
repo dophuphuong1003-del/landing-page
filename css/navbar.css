@@ -1,83 +1,62 @@
 /* =========================================================
    NAVBAR
 ========================================================= */
-
 #navbar{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-
   z-index:999;
-
   background:rgba(255,255,255,.82);
-
   transition:.3s ease;
 }
 
 #navbar.scrolled{
   background:rgba(244,243,243,.82);
-
   backdrop-filter:blur(14px);
-
   box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 /* =========================================================
    INNER
 ========================================================= */
-
 .nav-inner{
   max-width:1280px;
   height:68px;
-
   margin:0 auto;
   padding:0 20px;
-
   display:flex;
   align-items:center;
-
-  gap:0;
 }
 
 /* =========================================================
    LOGO
 ========================================================= */
-
 .nav-logo{
   display:flex;
   align-items:center;
-
   flex-shrink:0;
-
   text-decoration:none;
 }
 
 .logo-nav{
   height:50px;
   width:auto;
-
   object-fit:contain;
-
   display:block;
 }
 
 /* =========================================================
-   MENU
+   MENU DESKTOP
 ========================================================= */
-
 .nav-links{
   flex:1;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   list-style:none;
-
   margin:0;
   padding:0 16px;
-
   gap:0;
 }
 
@@ -87,143 +66,97 @@
 
 .nav-links li a{
   position:relative;
-
   display:block;
-
   padding:8px 12px;
-
   border-radius:6px;
-
   text-decoration:none;
   white-space:nowrap;
-
   font-size:16px;
   font-weight:600;
-
   color:rgba(0,0,0,.85);
-
   transition:.25s ease;
-
   outline:none;
-
   background:transparent;
-
   -webkit-tap-highlight-color:transparent;
 }
 
-/* HOVER */
-
+/* hover */
 .nav-links li a:hover{
   color:#08a045;
 }
 
-/* ACTIVE */
+/* underline effect */
+.nav-links li a::after{
+  content:'';
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:2px;
+  height:2px;
+  border-radius:999px;
+  background:#08a045;
+  transform:scaleX(0);
+  transition:.25s ease;
+}
 
+/* ACTIVE MENU (scroll spy) */
 .nav-links li a.active{
-  background:transparent;
   color:#08a045;
   font-weight:700;
 }
 
-/* LINE */
-
-.nav-links li a::after{
-  content:'';
-
-  position:absolute;
-
-  left:12px;
-  right:12px;
-  bottom:2px;
-
-  height:2px;
-
-  border-radius:999px;
-
-  background:#08a045;
-
-  transform:scaleX(0);
-
-  transition:.25s ease;
-}
-
-.nav-links li a:hover::after,
 .nav-links li a.active::after{
   transform:scaleX(1);
-}
-
-/* REMOVE CLICK BG */
-
-.nav-links li a:focus,
-.nav-links li a:active{
-  background:transparent;
-  outline:none;
-  box-shadow:none;
 }
 
 /* =========================================================
    CONTACT BUTTON
 ========================================================= */
-
-.nav-contact-btn{
+.nav-contact-btn,
+.nav-contact-btn:visited,
+.nav-contact-btn:focus,
+.nav-contact-btn:active{
   flex-shrink:0;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   gap:8px;
-
   padding:12px 22px;
-
   border-radius:999px;
-
   background:#08a045;
   color:#fff;
-
   font-size:15px;
   font-weight:700;
-
   text-decoration:none;
-
   transition:.3s ease;
-
   -webkit-tap-highlight-color:transparent;
 }
 
 .nav-contact-btn:hover{
   background:#07853a;
-
   transform:translateY(-2px);
 }
 
 /* =========================================================
    HAMBURGER
 ========================================================= */
-
 .nav-hamburger{
   display:none;
-
   flex-direction:column;
-
   gap:5px;
-
   cursor:pointer;
 }
 
 .nav-hamburger span{
   width:24px;
   height:2px;
-
   border-radius:999px;
-
   background:#111;
 }
 
 /* =========================================================
    GLOBAL REMOVE HIGHLIGHT
 ========================================================= */
-
 *{
   -webkit-tap-highlight-color:transparent;
 }
@@ -233,80 +166,86 @@ button{
   outline:none;
 }
 
-a:focus,
-a:active,
-button:focus,
-button:active{
-  outline:none;
-  box-shadow:none;
-  background:transparent;
-}
-
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE MOBILE
 ========================================================= */
-
-@media(max-width:1100px){
-
-  .nav-links{
-    padding:0 8px;
-  }
-
-  .nav-links li a{
-    padding:6px 8px;
-    font-size:13px;
-  }
-
-}
-
 @media(max-width:992px){
 
   .nav-inner{
-    padding:0 24px;
+    padding:0 20px;
+    justify-content:space-between;
   }
 
+  /* contact button */
   .nav-contact-btn{
-    display:none;
+    display:flex;
+    padding:10px 18px;
+    font-size:14px;
+    margin-left:auto;
+    margin-right:14px;
   }
 
+  /* hamburger */
   .nav-hamburger{
     display:flex;
+    z-index:1001;
   }
 
+  /* mobile menu */
   .nav-links{
     position:fixed;
-
     top:68px;
-    left:0;
-
-    width:100%;
-
-    background:#183224;
-
+    left:50%;
+    transform:translateX(-50%) translateY(-120%);
+    width:92%;
+    max-width:420px;
+    background:rgba(10,35,20,.96);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:22px;
+    display:flex;
     flex-direction:column;
-
-    padding:28px 0;
-
-    gap:4px;
-
-    transform:translateY(-120%);
+    align-items:center;
+    gap:10px;
     opacity:0;
-
-    transition:.3s ease;
+    visibility:hidden;
+    transition:.35s ease;
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    z-index:1000;
   }
 
   .nav-links.open{
-    transform:translateY(0);
+    transform:translateX(-50%) translateY(0);
     opacity:1;
+    visibility:visible;
+  }
+
+  .nav-links li{
+    width:100%;
   }
 
   .nav-links li a{
+    width:100%;
+    padding:14px 18px;
+    border-radius:14px;
+    text-align:center;
     color:#fff;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s ease;
+  }
+
+  .nav-links li a:hover{
+    background:rgba(255,255,255,.08);
+    color:#6dff9b;
   }
 
   .nav-links li a.active{
-    color:#08a045;
-    background:transparent;
+    background:rgba(109,255,155,.18);
+    color:#6dff9b;
   }
 
+  .nav-links li a::after{
+    display:none;
+  }
 }

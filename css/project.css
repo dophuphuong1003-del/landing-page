@@ -3,8 +3,7 @@
    ============================================================ */
 
 #projects {
-
-  padding: 0px 6vw;
+  padding: 64px 6vw;
   background: var(--white);
 }
 
@@ -15,7 +14,6 @@
 }
 
 .proj-title {
-  margin-bottom: -40px;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 800;
   color: #2d9e5f;
@@ -35,33 +33,35 @@
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
+  background: #000;              /* nền đen để ảnh contain không bị lộ viền trắng */
 }
 
 .proj-card-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;          /* tỷ lệ ảnh ngang như trong ảnh */
+  aspect-ratio: 4 / 3;
   border-radius: 14px;
   overflow: hidden;
- 
+  background: #111;
 }
 
-/* ── ẢNH ── */
+/* ── ẢNH: giữ nguyên tỷ lệ, không cắt ── */
 .proj-card-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;             /* fill đầy card */
+  object-position: center;
   display: block;
   transition: transform .45s ease;
 }
 
 .proj-card:hover .proj-card-img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 /* ── PLACEHOLDER ── */
 .proj-card-placeholder {
-  display: none;                 /* JS bật khi ảnh lỗi */
+  display: none;
   position: absolute;
   inset: 0;
   flex-direction: column;
@@ -70,6 +70,7 @@
   gap: .5rem;
   background: #d6edd9;
   font-size: 2rem;
+  border-radius: 14px;
 }
 
 .proj-placeholder-text {
@@ -79,36 +80,39 @@
   padding: 0 1rem;
 }
 
-/* ── OVERLAY GRADIENT + LABEL ── */
+/* ── GRADIENT OVERLAY ── */
 .proj-card-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 2rem 1rem .9rem;
+  padding: 2.5rem 1rem .85rem;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, .65) 0%,
-    transparent 100%
+    rgba(0,0,0,.72) 0%,
+    rgba(0,0,0,.25) 60%,
+    transparent    100%
   );
   border-radius: 0 0 14px 14px;
   display: flex;
   align-items: flex-end;
-  transition: opacity .3s ease;
 }
 
-.proj-card-label{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-
-  text-align:center;
-
-  color:#fff;
-  font-size:.99rem;
-  font-weight:700;
-  line-height:1.3;
-
-  text-shadow:0 1px 4px rgba(0,0,0,.4);
+/* ── LABEL ── */
+.proj-card-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* QUAN TRỌNG */
+  width: 100%;
+  height: 10%;
+  box-sizing: border-box;
+  
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  text-shadow: 0 1px 6px rgba(0,0,0,.5);
 }
 
 /* ── RESPONSIVE ── */

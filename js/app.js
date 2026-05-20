@@ -76,7 +76,7 @@ const App = (() => {
           const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
           if (active) {
             active.style.color = 'var(--gold)';
-            active.style.background = ' #55AD57'
+            active.classList.add('active')
           }
         }
       });

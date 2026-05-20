@@ -21,6 +21,9 @@ const PainPoints = (() => {
     <p class="pain-text">
       ${p.text}
     </p>
+    <p class="pain-text2">
+      ${p.text2}
+    </p>
 
   </div>
 `).join('');

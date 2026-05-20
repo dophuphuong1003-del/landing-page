@@ -19,31 +19,36 @@ const PAIN_POINTS = [
   {
     image: "public/static/vấn đề/màu sắc.png",
     h2:"Thiết kế thiếu nỗi bật",
-    text: "Bao bì chưa tạo được dấu ấn thương hiệu"
+    text: "Bao bì chưa tạo được",
+    text2: "dấu ấn thương hiệu"
   },
 
   {
     image: "public/static/vấn đề/chất liệu.png",
     h2:"Màu in sai lệnh",
-    text: "Thành phẩm khác với file thiết kế"
+    text: "Thành phẩm khác với màu",
+    text2:"đã thống nhất trước đó"
   },
 
   {
     image: "public/static/vấn đề/hộp giấy.png",
     h2:"Khó chọn chất liệu",
-    text: "Không biết loại giấy nào phù hợp sản phẩm"
+    text: "Không biết loại giấy ",
+    text2:"nào phù hợp sản phẩm"
   },
 
   {
     image: "public/static/vấn đề/số lượng.png",
     h2:"Hộp giấy chất lượng kém",
-    text: "Dễ móp méo khi vận chuyển"
+    text: "Dễ móp méo khi ",
+    text2:"vận chuyển"
   },
 
   {
     image: "public/static/vấn đề/chậm trễ.png",
     h2:"Chi phí và tiến độ cao",
-    text: "Số lượng tối thiểu lớn, giao hàng chậm trễ"
+    text: "Số lượng tối thiểu lớn,",
+    text2:" giao hàng chậm trễ"
   }
 
 ];
@@ -70,50 +75,75 @@ const SOLUTIONS = [
 const FEATURED_PRODUCTS = [
   { 
     image: "public/static/Sản phẩm tiêu biểu/1.png",
-    name: "Hộp Cafe muối hòa tan UFO",
+    name: "HỘP CÀ PHÊ MUỐI",
     color: "#e8f5e9"
   },
 
   { 
     image: "public/static/Sản phẩm tiêu biểu/2.png",
-    name: "HộpCafe muối hòa tan UFO",
+    name: "HỘP NẤM MỐI ĐEN",
     color: "#e3f2fd"
   },
 
   { 
     image: "public/static/Sản phẩm tiêu biểu/3.png",
-    name: "Hộp hồng treo gió",
+    name: "HỘP XOÀI SẤY GIÒN",
     color: "#fff8e1"
   },
 
   { 
     image: "public/static/Sản phẩm tiêu biểu/4.png",
-    name: "Hộp cá kèo kho rau răm",
+    name: "HỘP RƯỢU MƠ",
     color: "#fce4ec"
   },
   { 
     image: "public/static/Sản phẩm tiêu biểu/5.png",
-    name: "Hộp vua sầu riêng",
+    name: "HỘP HỒNG TREO GIÓ",
     color: "#fce4ec"
   },
   { 
     image: "public/static/Sản phẩm tiêu biểu/6.png",
-    name: "Hộp mực xào cần tây",
+    name: "HỘP CÁ KHO",
     color: "#fce4ec"
   },
   { 
-    image: "public/static/Sản phẩm tiêu biểu/7.png",
-    name: "Hộp trà gu việc",
+    image: "public/static/Sản phẩm tiêu biểu/7.jpg",
+    name: "HỘP TRÀ TRÁI CÂY NHIỆT ĐỚI",
     color: "#fce4ec"
   },
   { 
     image: "public/static/Sản phẩm tiêu biểu/8.png",
-    name: "Hộp bánh canh chả cá bọc trứng cúc",
+    name: "HỘP MỰC XÀO CẦN TÂY",
     color: "#fce4ec"
   },
   { 
-    image: "public/static/Sản phẩm tiêu biểu/10.jpg",
-    name: "Hộp trà trái cây nhiệt đới",
+    image: "public/static/Sản phẩm tiêu biểu/9.png",
+    name: "HỘP THỨC MÓN TẾT",
+    color: "#fce4ec"
+  },
+  { 
+    image: "public/static/Sản phẩm tiêu biểu/10.png",
+    name: "HỘP SẦU RIÊNG TÁCH MÚI",
+    color: "#fce4ec"
+  },
+  { 
+    image: "public/static/Sản phẩm tiêu biểu/11.png",
+    name: "HỘP LY CÀ PHÊ",
+    color: "#fce4ec"
+  },
+  { 
+    image: "public/static/Sản phẩm tiêu biểu/12.png",
+    name: "HỘP TRÀ GU VIỆT",
+    color: "#fce4ec"
+  },
+  { 
+    image: "public/static/Sản phẩm tiêu biểu/13.png",
+    name: "HỘP KẸO MÈ XỬNG",
+    color: "#fce4ec"
+  },
+  { 
+    image: "public/static/Sản phẩm tiêu biểu/14.png",
+    name: "HỘP BÁNH CANH CHẢ CÁ",
     color: "#fce4ec"
   },
 ];
@@ -151,28 +181,36 @@ const QUYTRINH_STEPS = [
     img  : 'public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Tư vấn & định hướng',
     title: 'TƯ VẤN & ĐỊNH HƯỚNG',
-    desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp phù hợp với sản phẩm và định vị thương hiệu.',
+    desc : 'Tiếp nhận nhu cầu, tư vấn',
+    desc2 : 'giải pháp phù hợp với sản ',
+    desc3 : 'phẩm và định vị thương hiệu.',
   },
   {
     num  : '2',
     img  : 'public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Thiết kế & hoàn thiện',
     title: 'THIẾT KẾ & HOÀN THIỆN',
-    desc : 'Xây dựng concept, chỉnh sửa và tối ưu thiết kế trước khi sản xuất.',
+    desc : 'Xây dựng concept, chỉnh sửa',
+    desc2 : 'và tối ưu thiết kế trước khi',
+    desc3 : 'sản xuất.',
   },
   {
     num  : '3',
     img  : 'public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
     alt  : 'In ấn & kiểm tra',
     title: 'IN ẤN & KIỂM TRA',
-    desc : 'Kiểm soát chất liệu, màu sắc và chất lượng thành phẩm trong quá trình in.',
+    desc : 'Kiểm soát chất liệu, màu sắc',
+    desc2: 'và chất lượng thành phẩm ',
+    desc3: 'trong quá trình in.',
   },
   {
     num  : '4',
     img  : 'public/static/design/rectangle_4464.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Bàn giao thành phẩm',
     title: 'BÀN GIAO THÀNH PHẨM',
-    desc : 'Hoàn thiện gia công và bàn giao đúng tiến độ theo yêu cầu dự án.',
+    desc : 'Hoàn thiện gia công ',
+    desc2 : 'bàn giao đúng tiến độ ',
+    desc3 : 'theo yêu cầu dự án.',
   },
 ];
 
@@ -180,9 +218,9 @@ const PROJECTS = [
   { label: 'Trái cây sấy giòn – FOODOVI',      image: 'public/static/project_2/foodovi_dmt.png' },
   { label: 'Cà phê hòa tan – UFO',             image: 'public/static/project_2/ufo_cafe_hoa_tan.jpg' },
   { label: 'Hộp thức món Tết – HUE LEGEND',    image: 'public/static/project_2/set_qua_tet.jpg' },
-  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: 'public/static/project_2/rectangle_4485.png' },
-  { label: 'Mỳ Quảng – CATHIFOOD',             image: 'public/static/project_2/rectangle_4487.png' },
-  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',     image: 'public/static/project_2/rectangle_4509.png' },
+  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: 'public/static/project_2/rectangle_4487.png' },
+  { label: 'Mỳ Quảng – CATHIFOOD',             image: 'public/static/project_2/rectangle_4509.png' },
+  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',     image: 'public/static/project_2/rectangle_4485.png' },
 ];
 
 
