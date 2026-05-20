@@ -1,152 +1,312 @@
 /* =========================================================
    NAVBAR
-   ========================================================= */
+========================================================= */
 
-#navbar {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.82);
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 999;
-  transition: .3s ease;
+#navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  z-index:999;
+
+  background:rgba(255,255,255,.82);
+
+  transition:.3s ease;
 }
 
-#navbar.scrolled {
-  background: rgba(244, 243, 243, 0.82);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 4px 20px rgba(0,0,0,.08);
-}
+#navbar.scrolled{
+  background:rgba(244,243,243,.82);
 
-.nav-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;          /* bỏ padding-top/bottom, dùng height */
-  height: 68px;             /* chiều cao cố định */
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
+  backdrop-filter:blur(14px);
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;           
-}
-
-.logo-nav {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-}
-
-.nav-links {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0 16px;          
-  flex: 1;                  
-  gap: 0;                   
-}
-
-.nav-links li a {
-  position: relative;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 16px;          
-  font-weight: 600;
-  padding: 8px 12px;        
-  border-radius: 6px;
-  white-space: nowrap;      
-  transition: .25s ease;
-  display: block;
-}
-
-.nav-links li a:hover { color: #b0e58f; }
-
-.nav-links li a::after {
-  color: #ffffff;
-  content: "";
-  position: absolute;
-  left: 12px; right: 12px;
-  bottom: 2px;
-  height: 2px;
-  background: #9be58f;
-  border-radius: 1px;
-  transform: scaleX(0);
-  transition: .25s ease;
-}
-
-.nav-links li a:hover::after
-.nav-links li a.active::after { transform: scaleX(1); }
-
-/* =========================================================
-   PHONE – không cho co lại
-   ========================================================= */
-
-.nav-phone {
-  flex-shrink: 0;           
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 9px 18px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.12);
-  backdrop-filter: blur(10px);
-  transition: .25s ease;
-  white-space: nowrap;
-}
-
-.nav-phone:hover {
-  background: #9be58f;
-  color: #183224;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 /* =========================================================
-   HAMBURGER & MOBILE (giữ nguyên)
-   ========================================================= */
+   INNER
+========================================================= */
 
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+.nav-inner{
+  max-width:1280px;
+  height:68px;
+
+  margin:0 auto;
+  padding:0 20px;
+
+  display:flex;
+  align-items:center;
+
+  gap:0;
 }
 
-.nav-hamburger span {
-  width: 24px; height: 2px;
-  background: white;
-  border-radius: 999px;
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo{
+  display:flex;
+  align-items:center;
+
+  flex-shrink:0;
+
+  text-decoration:none;
 }
 
-@media (max-width: 1100px) {
-  .nav-links { padding: 0 8px; }
-  .nav-links li a { padding: 6px 8px; font-size: 13px; }
+.logo-nav{
+  height:50px;
+  width:auto;
+
+  object-fit:contain;
+
+  display:block;
 }
 
-@media (max-width: 992px) {
-  .nav-inner { padding: 0 24px; }
-  .nav-phone { display: none; }
-  .nav-hamburger { display: flex; }
+/* =========================================================
+   MENU
+========================================================= */
 
-  .nav-links {
-    position: fixed;
-    top: 68px; left: 0;
-    width: 100%;
-    background: #183224;
-    flex-direction: column;
-    padding: 28px 0;
-    gap: 4px;
-    transform: translateY(-120%);
-    opacity: 0;
-    transition: .3s ease;
+.nav-links{
+  flex:1;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  list-style:none;
+
+  margin:0;
+  padding:0 16px;
+
+  gap:0;
+}
+
+.nav-links li{
+  list-style:none;
+}
+
+.nav-links li a{
+  position:relative;
+
+  display:block;
+
+  padding:8px 12px;
+
+  border-radius:6px;
+
+  text-decoration:none;
+  white-space:nowrap;
+
+  font-size:16px;
+  font-weight:600;
+
+  color:rgba(0,0,0,.85);
+
+  transition:.25s ease;
+
+  outline:none;
+
+  background:transparent;
+
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* HOVER */
+
+.nav-links li a:hover{
+  color:#08a045;
+}
+
+/* ACTIVE */
+
+.nav-links li a.active{
+  background:transparent;
+  color:#08a045;
+  font-weight:700;
+}
+
+/* LINE */
+
+.nav-links li a::after{
+  content:'';
+
+  position:absolute;
+
+  left:12px;
+  right:12px;
+  bottom:2px;
+
+  height:2px;
+
+  border-radius:999px;
+
+  background:#08a045;
+
+  transform:scaleX(0);
+
+  transition:.25s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after{
+  transform:scaleX(1);
+}
+
+/* REMOVE CLICK BG */
+
+.nav-links li a:focus,
+.nav-links li a:active{
+  background:transparent;
+  outline:none;
+  box-shadow:none;
+}
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.nav-contact-btn{
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:#08a045;
+  color:#fff;
+
+  font-size:15px;
+  font-weight:700;
+
+  text-decoration:none;
+
+  transition:.3s ease;
+
+  -webkit-tap-highlight-color:transparent;
+}
+
+.nav-contact-btn:hover{
+  background:#07853a;
+
+  transform:translateY(-2px);
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.nav-hamburger{
+  display:none;
+
+  flex-direction:column;
+
+  gap:5px;
+
+  cursor:pointer;
+}
+
+.nav-hamburger span{
+  width:24px;
+  height:2px;
+
+  border-radius:999px;
+
+  background:#111;
+}
+
+/* =========================================================
+   GLOBAL REMOVE HIGHLIGHT
+========================================================= */
+
+*{
+  -webkit-tap-highlight-color:transparent;
+}
+
+a,
+button{
+  outline:none;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active{
+  outline:none;
+  box-shadow:none;
+  background:transparent;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+    padding:0 8px;
   }
 
-  .nav-links.open {
-    transform: translateY(0);
-    opacity: 1;
+  .nav-links li a{
+    padding:6px 8px;
+    font-size:13px;
   }
+
+}
+
+@media(max-width:992px){
+
+  .nav-inner{
+    padding:0 24px;
+  }
+
+  .nav-contact-btn{
+    display:none;
+  }
+
+  .nav-hamburger{
+    display:flex;
+  }
+
+  .nav-links{
+    position:fixed;
+
+    top:68px;
+    left:0;
+
+    width:100%;
+
+    background:#183224;
+
+    flex-direction:column;
+
+    padding:28px 0;
+
+    gap:4px;
+
+    transform:translateY(-120%);
+    opacity:0;
+
+    transition:.3s ease;
+  }
+
+  .nav-links.open{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+  .nav-links li a{
+    color:#fff;
+  }
+
+  .nav-links li a.active{
+    color:#08a045;
+    background:transparent;
+  }
+
 }

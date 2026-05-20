@@ -18,9 +18,12 @@ const Navbar = (() => {
 
         <ul class="nav-links" id="navLinks">${links}</ul>
 
-        <a href="tel:${CONFIG.phone.replace(/\s/g,'')}" class="nav-phone">
-          📞 0896 549 310
-        </a>
+        <a 
+  href="tel:${CONFIG.phone.replace(/\s/g,'')}" 
+  class="nav-contact-btn"
+      >
+  📞 Liên hệ ngay
+    </a>
 
         <div class="nav-hamburger" id="navHamburger">
           <span></span><span></span><span></span>

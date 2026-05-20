@@ -11,11 +11,11 @@ const App = (() => {
     PainPoints,
     Solutions,
     BoxTypes,
-    Materials,
+    ThietKe,
+    QuyTrinh,
     Partners,
-    Process,
     Projects,
-/*    Contact,*/
+    Banner,
     Footer,
   ];
 
@@ -76,7 +76,7 @@ const App = (() => {
           const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
           if (active) {
             active.style.color = 'var(--gold)';
-            active.style.background = 'var(--gold-pale)';
+            active.style.background = ' #55AD57'
           }
         }
       });

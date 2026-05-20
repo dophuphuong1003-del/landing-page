@@ -14,8 +14,6 @@ const Hero = (() => {
           alt="MyFarm Banner"
           class="hero-banner"
          
-        
-
         <!-- Overlay content -->
         <div class="hero-overlay">
         </div>

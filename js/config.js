@@ -18,47 +18,55 @@ const PAIN_POINTS = [
 
   {
     image: "public/static/vấn đề/màu sắc.png",
-    text: "Màu in không đúng như file thiết kế"
+    h2:"Thiết kế thiếu nỗi bật",
+    text: "Bao bì chưa tạo được dấu ấn thương hiệu"
   },
 
   {
     image: "public/static/vấn đề/chất liệu.png",
-    text: "Không biết chọn chất liệu phù hợp"
+    h2:"Màu in sai lệnh",
+    text: "Thành phẩm khác với file thiết kế"
   },
 
   {
     image: "public/static/vấn đề/hộp giấy.png",
-    text: "Hộp giấy dễ hư, không chắc chắn"
+    h2:"Khó chọn chất liệu",
+    text: "Không biết loại giấy nào phù hợp sản phẩm"
   },
 
   {
     image: "public/static/vấn đề/số lượng.png",
-    text: "Số lượng tối thiểu quá cao"
+    h2:"Hộp giấy chất lượng kém",
+    text: "Dễ móp méo khi vận chuyển"
   },
 
   {
     image: "public/static/vấn đề/chậm trễ.png",
-    text: "Giao hàng chậm, ảnh hưởng kế hoạch"
+    h2:"Chi phí và tiến độ cao",
+    text: "Số lượng tối thiểu lớn, giao hàng chậm trễ"
   }
 
 ];
 const SOLUTIONS = [
-  'Tư vấn giải pháp bao bì phù hợp ngân sách và định vị thương hiệu',
-  'Hỗ trợ thiết kế & dựng 3D miễn phí',
-  'In mẫu chuẩn – kiểm màu trước khi sản xuất',
-  'Đa dạng chất liệu, gia công cao cấp',
-  'Theo sát đơn hàng từ file đến thành phẩm',
-  'Giao hàng đúng hẹn – hỗ trợ sau bán hàng',
+  {
+    title: "THIẾT KẾ",
+    items: [
+      "Tư vấn định hướng bao bì theo ngành hàng",
+      "Thiết kế nhận diện & mockup 3D",
+      "Tối ưu layout giúp tăng nhận diện thương hiệu"
+    ]
+  },
+  {
+    title: "IN ẤN & GIA CÔNG",
+    items: [
+      "In màu chuẩn – kiểm tra mẫu trước sản xuất",
+      "Đa dạng chất liệu & kỹ thuật gia công",
+      "Theo sát tiến độ đến khi hoàn thiện thành phẩm"
+    ]
+  }
 ];
 
-const BOX_TYPES = [
-  { icon: '💄', alt: "Hộp Mỹ Phẩm", label: 'Hộp Mỹ Phẩm',   color: '#fce4f0' },
-  { icon: '🍵', label: 'Hộp Thực Phẩm', color: '#e8f5e9' },
-  { icon: '🎁', label: 'Hộp Quà Tặng',  color: '#e3f2fd' },
-  { icon: '💊', label: 'Hộp Dược Phẩm', color: '#fff8e1' },
-  { icon: '🛍️', label: 'Hộp FMCG',      color: '#fce4ec' },
-  { icon: '🏪', label: 'Hộp Retail',    color: '#f3e5f5' },
-];
+
 const FEATURED_PRODUCTS = [
   { 
     image: "public/static/Sản phẩm tiêu biểu/1.png",
@@ -110,150 +118,88 @@ const FEATURED_PRODUCTS = [
   },
 ];
 
-const MATERIALS = [
-  { 
-    image: "public/static/giấy/Giấy duplex.jpg",
-    name: "Giấy Duplex",
-    color: "#fce4f0"
+const THIETKE_CARDS = [
+  {
+    icon  : '/public/static/design/group_14520.png',
+    title: 'Thiết kế nhận diện thương hiệu',
+    desc : 'Tạo dấu ấn riêng với logo, màu sắc, font chữ và hệ thống hình ảnh đồng bộ.',
+    img  : '/public/static/design/image_6.png',  
+    alt  : 'Nhận diện thương hiệu',
   },
-
-  { 
-    image: "public/static/giấy/Giấy ivory.jpg",
-    name: "Giấy Ivory",
-    color: "#e8f5e9"
+  {
+    icon : '/public/static/design/group_14521.png',
+    title: 'Thiết kế bao bì sản phẩm',
+    desc : 'Biến sản phẩm thành trải nghiệm đẹp mắt, tinh chu và thu hút từ ánh nhìn đầu tiên.',
+    img  : '/public/static/design/image_7.png',  
+    alt  : 'Bao bì sản phẩm',
   },
-
-  { 
-    image: "public/static/giấy/nau_kraft.jpg",
-    name: "Giấy Kraft Nâu",
-    color: "#e3f2fd"
-  },
-
-  { 
-    image: "public/static/giấy/Giấy kraft trắng.jpg",
-    name: "Giấy Kraft Trắng",
-    color: "#fff8e1"
-  },
-
-  { 
-    image: "public/static/giấy/Giấy mĩ thuật.jpg",
-    name: "Giấy Mĩ Thuật",
-    color: "#fce4ec"
+  {
+    icon : '/public/static/design/group_14522.png',
+    title: 'Thiết kế website doanh nghiệp',
+    desc : 'Giao diện hiện đại, dễ sử dụng, tối ưu trải nghiệm và hỗ trợ tăng chuyển đổi.',
+    img  : '/public/static/design/image_8.png',   
+    alt  : 'Website doanh nghiệp',
   },
 ];
 
 
-const FINISHING = [
-  { icon: '✨', 
-    name: 'Ép Kim',
-    images: ["public/static/Gia công sau in/ÉP KIM/ép kim.jpg"] },
 
-  { icon: '🔷', 
-    name: 'Dập Nổi',
-    images: ["public/static/Gia công sau in/DẬP NỔI - DẬP CHÌM/Dập nổi dập chìm.jpg"] },
 
-  { icon: '🔆', 
-    name: 'UV Định Hình',
-    images: ["public/static/Gia công sau in/UV ĐỊNH HÌNH/uv định hình 1.jpg",
-            "public/static/Gia công sau in/UV ĐỊNH HÌNH/UV định hình 2.jpg",
-            "public/static/Gia công sau in/UV ĐỊNH HÌNH/UV định hình 3.jpg",
-            "public/static/Gia công sau in/UV ĐỊNH HÌNH/UV định hình.jpg"] },
-
-  { icon: '🌟', 
-    name: 'Cán màng',
-    images: ["public/static/Gia công sau in/CÁN MÀNG/cán màng 1.jpg",
-            "public/static/Gia công sau in/CÁN MÀNG/cán màng 2.jpg",
-            "public/static/Gia công sau in/CÁN MÀNG/cán màng 3.jpg"] },
-
-  { icon: '✂️', 
-    name: 'Bế Hình',
-    images: ["public/static/Gia công sau in/BẾ THEO HÌNH DẠNG/bế thành phẩm theo hình dạng.jpg",
-            "public/static/Gia công sau in/BẾ THEO HÌNH DẠNG/bế.jpg"]
-},
-];
-
-const PROCESS_STEPS = [
-
+const QUYTRINH_STEPS = [
   {
-    num: '1',
-    icon: '🧾',
-    title: 'Nhận yêu cầu'
+    num  : '1',
+    img  : '/public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
+    alt  : 'Tư vấn & định hướng',
+    title: 'TƯ VẤN & ĐỊNH HƯỚNG',
+    desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp phù hợp với sản phẩm và định vị thương hiệu.',
   },
-
   {
-    num: '2',
-    icon: '🤝',
-    title: 'Tư vấn & báo giá'
+    num  : '2',
+    img  : '/public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
+    alt  : 'Thiết kế & hoàn thiện',
+    title: 'THIẾT KẾ & HOÀN THIỆN',
+    desc : 'Xây dựng concept, chỉnh sửa và tối ưu thiết kế trước khi sản xuất.',
   },
-
   {
-    num: '3',
-    icon: '🖥️',
-    title: 'Duyệt file thiết kế'
+    num  : '3',
+    img  : '/public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
+    alt  : 'In ấn & kiểm tra',
+    title: 'IN ẤN & KIỂM TRA',
+    desc : 'Kiểm soát chất liệu, màu sắc và chất lượng thành phẩm trong quá trình in.',
   },
-
   {
-    num: '4',
-    icon: '🏭',
-    title: 'Sản xuất'
+    num  : '4',
+    img  : '/public/static/design/rectangle_4464.png',   // ← thay đường dẫn ảnh thật
+    alt  : 'Bàn giao thành phẩm',
+    title: 'BÀN GIAO THÀNH PHẨM',
+    desc : 'Hoàn thiện gia công và bàn giao đúng tiến độ theo yêu cầu dự án.',
   },
-
-  {
-    num: '5',
-    icon: '📦',
-    title: 'Kiểm tra & giao hàng'
-  },
-
 ];
 
 const PROJECTS = [
-  { 
-    image: "public/static/project/ufo_cafe_hoa_tan.jpg",
-    name: "Cà phê hòa tan UFO",
-    color: "#fce4f0"
-  },
-
-  { 
-    image: "public/static/project/foodovi_dmt.png",
-    name: "Foodovi",
-    color: "#e8f5e9"
-  },
-
-  { 
-    image: "public/static/project/set_qua_tet.jpg",
-    name: "Hộp thức món Tết",
-    color: "#e3f2fd"
-  },
+  { label: 'Trái cây sấy giòn – FOODOVI',      image: '/public/static/project/foodovi_dmt.png' },
+  { label: 'Cà phê hòa tan – UFO',             image: '/public/static/project/ufo_cafe_hoa_tan.jpg' },
+  { label: 'Hộp thức món Tết – HUE LEGEND',    image: '/public/static/project/set_qua_tet.jpg' },
+  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: '/public/static/project/rectangle_4485.png' },
+  { label: 'Mỳ Quảng – CATHIFOOD',             image: '/public/static/project/rectangle_4487.png' },
+  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',    image: '/public/static/project/rectangle_4509.png' },
 ];
 
-const TESTIMONIALS = [
-  {
-    text  : 'Printpack hỗ trợ rất nhiệt tình từ khâu tư vấn đến khi nhận hàng. Màu in đẹp, hộp chắc chắn, giao đúng tiến độ. Rất hài lòng!',
-    name  : 'Chị Hương',
-    role  : 'Founder Rosé Cosmetics',
-    rating: 5,
-  },
-];
+
 
 const BRANDS = ['Rosé', 'MỘC', 'NAM DƯỢC', 'hebe', 'The Organic'];
 
 const NAV_LINKS = [
-  { label: 'TRANG CHỦ',           href: '#hero' },
-  { label: 'GIỚI THIỆU',          href: '#solutions' },
+  { label: 'GIẢI PHÁP',           href: '#solutions' },
   { label: 'SẢN PHẨM',            href: '#boxtypes' },
-  { label: 'CHẤT LIỆU - GIA CÔNG',href: '#materials' },
-  { label: 'ĐỐI TÁC',             href: '#partners' },
-  { label: 'QUY TRÌNH',           href: '#process' },
+  { label: 'THIẾT KẾ',            href: '#thietke' },
+  { label: 'QUY TRÌNH',             href: '#quytrinh' },
+  { label: 'ĐỐI TÁC',           href: '#partners' },
   { label: 'DỰ ÁN',               href: '#projects' },
-  { label: 'LIÊN HỆ',             href: '#contact' },
 ];
 
-const FOOTER_MENU = [
-  'Giới thiệu','Sản phẩm','Chất liệu - gia công','Quy trình','Dự án','Liên hệ',
-];
-// ============================================================
-// data/partners.js
-// ============================================================
+
+
 
 const PARTNER_LOGOS = [
 
@@ -368,5 +314,19 @@ const PARTNER_LOGOS = [
     name: "Partner 7",
     image: "public/static/Logo đối tác/28.jpg"
   },
-
 ];
+const FOOTER_DATA = {
+  desc    : 'Giải pháp thiết kế và in ấn bao bì đồng bộ cho thương hiệu và doanh nghiệp.',
+  contacts: [
+    { icon: '📞', label: 'Hotline: 0896 549 310 – 0962 510 180 (In ấn)',  href: 'tel:0896549310' },
+    { icon: '📞', label: 'Hotline: 033 387 7745 (Thiết kế)',               href: 'tel:0333877745' },
+    { icon: '✉️', label: 'Email: support@demeter.vn',                      href: 'mailto:support@demeter.vn' },
+    { icon: '📍', label: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh', href: '#' },
+  ],
+  socials: [
+    { label: 'Facebook', icon: 'fb',   href: 'https://www.facebook.com/DemeterForBusiness' },   // ← thay href thật
+    { label: 'Zalo',     icon: 'zalo', href: 'https://zalo.me/0896549310' },
+    { label: 'Điện thoại',  icon: '📞',   href: '0896 549 310' },   // ← thay href thật
+  ],
+};
+

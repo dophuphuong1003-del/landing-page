@@ -1,84 +1,183 @@
-/* ── SOLUTIONS ── */
-#solutions { background: var(--light); }
-.solutions-inner {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 5rem; align-items: center;
-  max-width: 1100px; 
+/* =========================================================
+   SOLUTIONS
+========================================================= */
+#solutions{
+  padding: 50px 0;
+  background: #f5f5f5;
+}
+
+.solutions-inner{
+  max-width: 1180px;
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  align-items: center;
 }
-.solutions-img-grid {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: .8rem;
+
+/* IMAGE */
+
+.solutions-image-wrap{
+  position: relative;
 }
-.sol-img-box {
-  border-radius: var(--radius); 
-  overflow: hidden;
-  aspect-ratio: 1; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  font-size: 3rem; 
-  transition: transform var(--transition);
+
+.solutions-image{
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  object-fit: cover;
 }
-.sec-label {
-  color: var(--green); 
+
+/* CONTENT */
+
+.solutions-content{
+  max-width: 620px;
+}
+
+.sec-label{
+  font-size:18px;
+  font-weight:700;
+  font-family:'Montserrat', sans-serif;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#242424;
+  margin-bottom:0px;
+}
+
+.solutions-title{
   font-size: 40px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #009a44;
+  margin-bottom: 10px;
+  flex-direction:column;
 }
-.gold-line {
-  background: black;
+/* GROUP */
+
+.solutions-group{
+  margin-bottom: 28px;
 }
 
-.solutions-list {
-    list-style: none; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 1rem; 
-    margin-top: 1.5rem; 
-}
-.solutions-list li {
-  display: flex; 
-  align-items: flex-start; 
-  gap: .8rem;
-  font-size: .9rem; 
-  color: var(--dark); 
-  line-height: 1.5;
-}
-.sol-check {
-  width: 22px; 
-  height: 22px; 
-  background: var(--green);
-  border-radius: 50%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  color: rgb(255, 255, 255); 
-  font-size: 1rem; 
-  flex-shrink: 0; 
-  margin-top: .1rem;
+.solutions-group-title{
+  font-size: 24px;
+  font-weight: 800;
+  color: #2b2b2b;
+  margin-bottom: 5px;
 }
 
-@media (max-width: 768px) { .solutions-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+.solutions-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.solutions-check{
+  width:15px;
+  height:15px;
+  min-width:15px;
+  border-radius:50%;
+  background:#1b7f4d;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:700;
+  margin-top:6px;
+}
+
+.solutions-item-text{
+  font-size:16px;
+  line-height:1.7;
+
+  color:#3b3b3b;
+}
+
+.solutions-list li{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4c4c4c;
+}
+
+/* GREEN DOT */
+
+.sol-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background: #00a651;
+
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* BUTTON */
+
 .solutions-btn-wrap{
-  margin-top:30px;
+  margin-top: 34px;
 }
 
 .solutions-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 20px;
-  background:#0c8f4f;
-  color:#fff;
-  border-radius:14px;
-  font-size:14px;
-  font-weight:700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  transition:.3s ease;
+  min-width: 250px;
+  height: 56px;
+
+  padding: 0 34px;
+
+  border-radius: 999px;
+
+  background: #00a651;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: .25s;
 }
 
 .solutions-btn:hover{
-  transform:translateY(-3px);
-  background:#032d19;
+  transform: translateY(-2px);
+  background: #008a45;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px){
+
+  .solutions-inner{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .solutions-title{
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 576px){
+
+  #solutions{
+    padding: 60px 0;
+  }
+
+  .solutions-title{
+    font-size: 32px;
+  }
+
+  .solutions-group-title{
+    font-size: 20px;
+  }
+
 }

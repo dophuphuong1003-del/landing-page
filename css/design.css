@@ -1,0 +1,152 @@
+/* ============================================================
+   THIETKE.CSS – Section Thiết Kế Toàn Diện
+   ============================================================ */
+
+#thietke {
+  padding: 72px 6vw;
+  background: var(--white);
+}
+
+/* ── HEADER ── */
+.tk-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tk-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #2d9e5f;
+  margin-bottom: .2rem;
+}
+
+.tk-sub {
+  font-size: 16px;
+  color: var(--mid);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── GRID ── */
+.tk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── CARD ── */
+.tk-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--white);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── CARD BODY ── */
+.tk-card-body {
+  padding: 1.4rem 1.4rem .8rem;
+}
+
+.tk-icon {
+  width: 44px;
+  height: 44px;
+  background: #eaf7f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.tk-card-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+
+.tk-card-desc {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin: 0rem;
+}
+.tk-line{
+  width:60px;
+  height:4px;
+
+  background:#08a045;
+
+  border-radius:999px;
+
+  margin:16px 0;
+}
+/* ── IMAGE AREA ── */
+.tk-img-wrap{
+  width:100%;
+  aspect-ratio:4/3;
+
+  border-top:1px solid var(--border);
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tk-img{
+  width:90%;
+  height:90%;
+
+  object-fit:cover;
+  display:block;
+
+  transition:transform var(--transition);
+}
+
+.tk-card:hover .tk-img {
+  transform: scale(1.04);
+}
+
+/* ── PLACEHOLDER (hiện khi chưa có ảnh) ── */
+.tk-img-placeholder {
+  display: none;                /* ẩn mặc định, JS bật khi ảnh lỗi */
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: var(--light);
+}
+
+.tk-placeholder-icon {
+  font-size: 2rem;
+  opacity: .35;
+}
+
+.tk-placeholder-text {
+  font-size: .72rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  #thietke { padding: 52px 5vw; }
+  .tk-grid { grid-template-columns: 1fr; }
+}
