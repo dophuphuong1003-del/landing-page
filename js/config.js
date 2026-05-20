@@ -120,24 +120,24 @@ const FEATURED_PRODUCTS = [
 
 const THIETKE_CARDS = [
   {
-    icon  : '/public/static/design/group_14520.png',
+    icon  : 'public/static/design/group_14520.png',
     title: 'Thiết kế nhận diện thương hiệu',
     desc : 'Tạo dấu ấn riêng với logo, màu sắc, font chữ và hệ thống hình ảnh đồng bộ.',
-    img  : '/public/static/design/image_6.png',  
+    img  : 'public/static/design/image_6.png',  
     alt  : 'Nhận diện thương hiệu',
   },
   {
-    icon : '/public/static/design/group_14521.png',
+    icon : 'public/static/design/group_14521.png',
     title: 'Thiết kế bao bì sản phẩm',
     desc : 'Biến sản phẩm thành trải nghiệm đẹp mắt, tinh chu và thu hút từ ánh nhìn đầu tiên.',
-    img  : '/public/static/design/image_7.png',  
+    img  : 'public/static/design/image_7.png',  
     alt  : 'Bao bì sản phẩm',
   },
   {
-    icon : '/public/static/design/group_14522.png',
+    icon : 'public/static/design/group_14522.png',
     title: 'Thiết kế website doanh nghiệp',
     desc : 'Giao diện hiện đại, dễ sử dụng, tối ưu trải nghiệm và hỗ trợ tăng chuyển đổi.',
-    img  : '/public/static/design/image_8.png',   
+    img  : 'public/static/design/image_8.png',   
     alt  : 'Website doanh nghiệp',
   },
 ];
@@ -148,28 +148,28 @@ const THIETKE_CARDS = [
 const QUYTRINH_STEPS = [
   {
     num  : '1',
-    img  : '/public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
+    img  : 'public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Tư vấn & định hướng',
     title: 'TƯ VẤN & ĐỊNH HƯỚNG',
     desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp phù hợp với sản phẩm và định vị thương hiệu.',
   },
   {
     num  : '2',
-    img  : '/public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
+    img  : 'public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Thiết kế & hoàn thiện',
     title: 'THIẾT KẾ & HOÀN THIỆN',
     desc : 'Xây dựng concept, chỉnh sửa và tối ưu thiết kế trước khi sản xuất.',
   },
   {
     num  : '3',
-    img  : '/public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
+    img  : 'public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
     alt  : 'In ấn & kiểm tra',
     title: 'IN ẤN & KIỂM TRA',
     desc : 'Kiểm soát chất liệu, màu sắc và chất lượng thành phẩm trong quá trình in.',
   },
   {
     num  : '4',
-    img  : '/public/static/design/rectangle_4464.png',   // ← thay đường dẫn ảnh thật
+    img  : 'public/static/design/rectangle_4464.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Bàn giao thành phẩm',
     title: 'BÀN GIAO THÀNH PHẨM',
     desc : 'Hoàn thiện gia công và bàn giao đúng tiến độ theo yêu cầu dự án.',
@@ -177,12 +177,12 @@ const QUYTRINH_STEPS = [
 ];
 
 const PROJECTS = [
-  { label: 'Trái cây sấy giòn – FOODOVI',      image: '/public/static/project/foodovi_dmt.png' },
-  { label: 'Cà phê hòa tan – UFO',             image: '/public/static/project/ufo_cafe_hoa_tan.jpg' },
-  { label: 'Hộp thức món Tết – HUE LEGEND',    image: '/public/static/project/set_qua_tet.jpg' },
-  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: '/public/static/project/rectangle_4485.png' },
-  { label: 'Mỳ Quảng – CATHIFOOD',             image: '/public/static/project/rectangle_4487.png' },
-  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',    image: '/public/static/project/rectangle_4509.png' },
+  { label: 'Trái cây sấy giòn – FOODOVI',      image: 'public/static/project/foodovi_dmt.png' },
+  { label: 'Cà phê hòa tan – UFO',             image: 'public/static/project/ufo_cafe_hoa_tan.jpg' },
+  { label: 'Hộp thức món Tết – HUE LEGEND',    image: 'public/static/project/set_qua_tet.jpg' },
+  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: 'public/static/project/rectangle_4485.png' },
+  { label: 'Mỳ Quảng – CATHIFOOD',             image: 'public/static/project/rectangle_4487.png' },
+  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',    image: 'public/static/project/rectangle_4509.png' },
 ];
 
 
@@ -197,8 +197,6 @@ const NAV_LINKS = [
   { label: 'ĐỐI TÁC',           href: '#partners' },
   { label: 'DỰ ÁN',               href: '#projects' },
 ];
-
-
 
 
 const PARTNER_LOGOS = [
