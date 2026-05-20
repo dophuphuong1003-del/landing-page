@@ -367,7 +367,7 @@ const FOOTER_DATA = {
   socials: [
     { label: 'Facebook', icon: 'fb',   href: 'https://www.facebook.com/DemeterForBusiness' },   
     { label: 'Zalo',     icon: 'zalo', href: 'https://zalo.me/0896549310' },
-    { label: 'Điện thoại',  icon: 'phone',   href: '0896 549 310' },  
+    { label: 'Điện thoại',  icon: 'phone',   href: 'tel:0896549310' },  
   ],
 };
 

@@ -31,7 +31,7 @@ const Footer = (() => {
     const map = {
       fb: `<img src="public/static/footer/facebook_logo.png" class="icon-img" />`,
 
-      zalo: `<img src="public/static/footer/icon_of_Zalo.svg.png" class="icon-img" />`,
+      zalo: `<img src="public/static/footer/icon_of_zalo.png" class="icon-img" />`,
 
       phone:`<img src="public/static/footer/dienthoai_ai.png" class="icon-img" />`,
     };
@@ -99,9 +99,9 @@ const Footer = (() => {
         class="float-btn facebook"  
         target="_blank"
         title="Facebook">
-        <img src="public/static/footer/icon_of_Zalo.svg.png" class="zalo-icon-actions" /></a>
+        <img src="public/static/footer/icon_of_zalo.png" class="zalo-icon-actions" /></a>
 
-        <a href="${FOOTER_DATA.contacts[2].href}"
+        <a href="${FOOTER_DATA.socials[2].href}"
            class="float-btn phone"
            title="Điện thoại">
           <img src="public/static/footer/dienthoai_ai.png" class="phone-icon-actions" /></a>
