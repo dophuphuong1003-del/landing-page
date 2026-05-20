@@ -21,7 +21,7 @@ const PainPoints = (() => {
     <p class="pain-text">
       ${p.text}
     </p>
-    <p class="pain-text2">
+    <p class="pain-text">
       ${p.text2}
     </p>
 

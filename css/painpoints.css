@@ -114,24 +114,29 @@
 
 @media(max-width:768px){
 
+
   #pain{
     padding:60px 24px;
   }
-
+.pain-title{
+  font-size: 1.2rem;
+}
   .pain-title strong{
     font-size:2rem;
   }
 
-  .pain-grid{
-    gap:2.5rem;
-  }
+.pain-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
 
-  .pain-item{
-    width:calc(50% - 20px);
-  }
+.pain-item{
+  flex:0 0 calc(50% - 20px); /* 👈 2 cột */
+}
 
   .pain-icon-wrap{
-    height:110px;
+    height:50px;
   }
 
   .pain-icon-img{
@@ -141,12 +146,11 @@
 
   .pain-h2{
     font-size:1rem;
-
     white-space:normal;
   }
 
   .pain-text{
-    font-size:.95rem;
+    font-size:.80rem;
   }
 
 }

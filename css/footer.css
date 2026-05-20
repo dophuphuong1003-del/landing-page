@@ -1,370 +1,193 @@
-/* ============================================================
-   FOOTER.CSS – UPDATED LIKE DESIGN
-============================================================ */
-
+/* =========================
+   FOOTER BASE
+========================= */
 #footer{
-  background:#242635;
-  position:relative;
-  overflow:hidden;
+  background:#0f172a;
+  color:#e5e7eb;
+  font-family: system-ui, sans-serif;
+  
+
+  position: relative;
+  overflow: hidden;
 }
 
-/* LEAF BG */
-#footer::after{
-  content:'';
+#footer::before{
+  content:"";
   position:absolute;
-  right:-40px;
-  bottom:-180px;
-  width:20px;
-  height:20px;
-  background-image:url(public/static/frame.png);
-  background-repeat:no-repeat;
+
+  right:5px;
+  bottom:-100px;
+
+  width:420px;
+  height:420px;
+
+  background:url("/public/static/frame.png") no-repeat center;
   background-size:contain;
 
-  opacity:.18;
-  pointer-events:none;
+  opacity:0.5; /* tăng lên để test */
+  z-index:1;
 }
-
-/* ============================================================
-   INNER
-============================================================ */
+.ft-body{
+  padding:60px 20px 30px;
+}
 
 .ft-inner{
-  max-width:1280px;
-
-  margin:0 auto;
-  padding:42px 70px 26px;
-
+  max-width:1200px;
+  margin:auto;
   display:grid;
-  grid-template-columns:
-    1.2fr
-    1.5fr
-    .9fr;
-
-  column-gap:90px;
-
-  align-items:flex-start;
-
-  position:relative;
-  z-index:2;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap:40px;
 }
-
-/* ============================================================
-   COLUMN TITLE
-============================================================ */
 
 .ft-col-title{
-  font-size:.78rem;
-  font-weight:700;
-
-  letter-spacing:.06em;
-  text-transform:uppercase;
-
-  color:#ffffff;
-
-  margin-bottom:18px;
+  font-weight:600;
+  margin-bottom:16px;
+  color:#fff;
+  letter-spacing:.5px;
 }
 
-/* ============================================================
+/* =========================
    LOGO
-============================================================ */
-
-.ft-logo{
-  margin-bottom:18px;
-}
+========================= */
 .ft-logo-img{
-  width: 240px;   /* chỉnh kích thước ngang */
-  height: auto;
-
-  display:block;
-  object-fit:contain;
+  max-width:160px;
+  height:auto;
 }
 
 .ft-desc{
-  max-width:280px;
-
-  font-size:.86rem;
-  line-height:1.8;
-
-  color:rgba(255,255,255,.72);
+  margin-top:12px;
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.6;
+}
+.ft-desc2{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.6;
 }
 
-/* ============================================================
-   CONTACT
-============================================================ */
 
+/* =========================
+   CONTACT
+========================= */
 .ft-contact-list{
   list-style:none;
-
-  display:flex;
-  flex-direction:column;
-
-  gap:10px;
+  padding:0;
+  margin:0;
 }
 
 .ft-contact-item{
   display:flex;
-  align-items:flex-start;
-
+  align-items:center;
   gap:10px;
-}
-
-.ft-contact-icon{
-  font-size:.85rem;
-  color:#fff;
-
-  margin-top:2px;
-  opacity:.85;
-
-  flex-shrink:0;
+  margin-bottom:10px;
 }
 
 .ft-contact-text{
-  font-size:.8rem;
-  line-height:1.65;
-
-  color:rgba(255,255,255,.72);
-
+  color:#cbd5e1;
   text-decoration:none;
-
-  transition:.25s;
+  font-size:14px;
 }
 
 .ft-contact-text:hover{
-  color:#2d9e5f;
+  color:#fff;
 }
 
-/* ============================================================
-   SOCIAL
-============================================================ */
-
+/* =========================
+   SOCIAL ICONS (MODERN)
+========================= */
 .ft-social-row{
   display:flex;
-  align-items:center;
-
-  gap:10px;
+  gap:12px;
 }
 
 .ft-social-btn{
-  width:34px;
-  height:34px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.12);
-
+  width:42px;
+  height:42px;
   display:flex;
   align-items:center;
   justify-content:center;
 
-  color:#fff;
-  text-decoration:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
 
-  font-size:.9rem;
-
-  transition:.25s;
+  transition: all .25s ease;
+  position:relative;
 }
 
 .ft-social-btn:hover{
-  background:#2d9e5f;
-  transform:translateY(-2px);
+  transform: translateY(-3px);
+  background:#2563eb;
 }
 
-/* ============================================================
-   BOTTOM
-============================================================ */
+.ft-social-btn .icon{
+  width:20px;
+  height:20px;
+  fill:white;
+}
 
+/* =========================
+   FOOTER BOTTOM
+========================= */
 .ft-bottom{
-  max-width:1280px;
-  margin:0 auto;
-  padding:14px 70px 18px;
-  border-top:1px solid rgba(255,255,255,.12);
+  border-top:1px solid rgba(255,255,255,0.08);
   text-align:center;
-  position:relative;
-  z-index:2;
+  padding:16px;
+  font-size:13px;
+  color:#94a3b8;
 }
 
-.ft-copy{
-  font-size:.76rem;
-  color:rgba(255,255,255,.72);
-}
-
-/* ============================================================
-   FLOAT BUTTONS
-============================================================ */
-
+/* =========================
+   FLOAT BUTTONS (MODERN)
+========================= */
 .float-actions{
   position:fixed;
-
-  right:18px;
-  bottom:18px;
-
-  z-index:300;
-
+  right:20px;
+  bottom:20px;
   display:flex;
   flex-direction:column;
-
   gap:12px;
+  z-index:999;
 }
-
-/* ============================================================
-   BASE BUTTON
-============================================================ */
 
 .float-btn{
   width:52px;
   height:52px;
-
-  border-radius:50%;
-
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
 
-  text-decoration:none;
+  color:white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 
-  font-size:1.15rem;
-
-  box-shadow:0 8px 24px rgba(0,0,0,.2);
-
-  transition:.25s;
-
-  outline:none;
-  border:none;
-
-  -webkit-tap-highlight-color:transparent;
+  transition: all .25s ease;
 }
-
-/* FIX visited / active / focus */
-
-.float-btn,
-.float-btn:visited,
-.float-btn:focus,
-.float-btn:active{
-  color:#fff;
-  text-decoration:none;
-  outline:none;
-  box-shadow:0 8px 24px rgba(0,0,0,.2);
-}
-
-/* HOVER */
 
 .float-btn:hover{
-  transform:scale(1.08);
+  transform: scale(1.08);
 }
 
-/* ============================================================
-   FACEBOOK
-============================================================ */
-
-.float-facebook-btn,
-.float-facebook-btn:visited,
-.float-facebook-btn:focus,
-.float-facebook-btn:active{
-  background:#1877f2;
-  color:#fff;
+.float-btn .icon{
+  width:22px;
+  height:22px;
+  
 }
 
-.float-facebook-btn:hover{
-  background:#1669db;
-}
-
-/* ============================================================
-   ZALO
-============================================================ */
-
-.float-zalo-btn,
-.float-zalo-btn:visited,
-.float-zalo-btn:focus,
-.float-zalo-btn:active{
-  background:#0068ff;
-  color:#fff;
-
-  font-weight:700;
-  font-size:.8rem;
-}
-
-.float-zalo-btn:hover{
-  background:#0057d8;
-}
-
-.zalo-text{
-  font-family:Arial,sans-serif;
-  letter-spacing:.02em;
-}
-
-/* ============================================================
-   PHONE
-============================================================ */
-
-.float-phone-btn,
-.float-phone-btn:visited,
-.float-phone-btn:focus,
-.float-phone-btn:active{
-  background:#2d9e5f;
-  color:#fff;
-}
-
-.float-phone-btn:hover{
-  background:#24874f;
-}
-
-/* ============================================================
-   MOBILE
-============================================================ */
-
-@media(max-width:768px){
-
-  .float-actions{
-    right:14px;
-    bottom:14px;
-  }
-
-  .float-btn{
-    width:48px;
-    height:48px;
-  }
-
-}
-/* ============================================================
+/* =========================
    RESPONSIVE
-============================================================ */
-
-@media(max-width:900px){
-
+========================= */
+@media (max-width: 768px){
   .ft-inner{
     grid-template-columns:1fr;
-    row-gap:32px;
-
-    padding:40px 24px 24px;
   }
 
-  .ft-bottom{
-    padding:14px 24px 20px;
+  .float-actions{
+    right:12px;
+    bottom:12px;
   }
-
-  .ft-desc{
-    max-width:100%;
+  .float-actions{
+    font-size: .1rem;
   }
-
-}
-.float-facebook-btn{
-  background:#1877f2;
-  color:#fff;
-}
-
-.float-facebook-btn:hover{
-  background:#1669db;
-}
-
-.float-zalo-btn{
-  background:#0068ff;
-  color:#fff;
-
-  font-weight:700;
-  font-size:.8rem;
-}
-
-.zalo-text{
-  font-family:Arial,sans-serif;
-  letter-spacing:.02em;
 }

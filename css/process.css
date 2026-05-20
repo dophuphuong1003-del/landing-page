@@ -75,12 +75,10 @@
 .qt-img{
   width:100%;
   height:100%;
-
   object-fit:cover;
-
   display:block;
-
   transition:transform .35s ease;
+  border-radius: 20px;
 }
 
 .qt-step:hover .qt-img {
@@ -135,6 +133,7 @@
 }
 
 .qt-step-title {
+  
   font-size: 1rem;
   font-weight: 800;
   color: var(--dark);
@@ -147,13 +146,16 @@
   color: var(--mid);
   line-height: 1.7;
   margin: 0;
-  text-align: justify;
+  
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .qt-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .qt-step-body{
+    text-align: center;
   }
 }
 

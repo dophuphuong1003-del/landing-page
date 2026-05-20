@@ -58,7 +58,7 @@ const BoxTypes = (() => {
           <div class="featured-header">
 
             <div class="featured-title">
-              Sản Phẩm Nổi Bật
+              Sản Phẩm Nỗi Bật
             </div>
 
             <button

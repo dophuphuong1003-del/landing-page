@@ -7,10 +7,10 @@ const CONFIG = {
   slogan      : 'IN ẤN - VẬT TƯ',
   tagline     : 'IN HỘP GIẤY MỀM THEO YÊU CẦU',
   sub         : 'Nâng tầm sản phẩm – Chinh phục khách hàng',
-  phone       : '0988 123 456',
-  email       : 'info@printpack.vn',
-  address     : '284/4 Phường Phú Thạnh, Quận Tân Phú, TP.HCM',
-  zalo        : '0988123456',
+  phone       : '0896549310',
+  email       : 'support@demeter.vn',
+  address     : 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh',
+  zalo        : '0896549310',
   year        : new Date().getFullYear(),
 };
 
@@ -151,21 +151,24 @@ const FEATURED_PRODUCTS = [
 const THIETKE_CARDS = [
   {
     icon  : 'public/static/design/group_14520.png',
-    title: 'Thiết kế nhận diện thương hiệu',
+    title: 'Thiết kế nhận diện',
+    title2: 'thương hiệu',
     desc : 'Tạo dấu ấn riêng với logo, màu sắc, font chữ và hệ thống hình ảnh đồng bộ.',
     img  : 'public/static/design/image_6.png',  
     alt  : 'Nhận diện thương hiệu',
   },
   {
     icon : 'public/static/design/group_14521.png',
-    title: 'Thiết kế bao bì sản phẩm',
+    title: 'Thiết kế bao bì',
+    title2: 'sản phẩm',
     desc : 'Biến sản phẩm thành trải nghiệm đẹp mắt, tinh chu và thu hút từ ánh nhìn đầu tiên.',
     img  : 'public/static/design/image_7.png',  
     alt  : 'Bao bì sản phẩm',
   },
   {
     icon : 'public/static/design/group_14522.png',
-    title: 'Thiết kế website doanh nghiệp',
+    title: 'Thiết kế website',
+    title2: 'doanh nghiệp',
     desc : 'Giao diện hiện đại, dễ sử dụng, tối ưu trải nghiệm và hỗ trợ tăng chuyển đổi.',
     img  : 'public/static/design/image_8.png',   
     alt  : 'Website doanh nghiệp',
@@ -181,17 +184,17 @@ const QUYTRINH_STEPS = [
     img  : 'public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Tư vấn & định hướng',
     title: 'TƯ VẤN & ĐỊNH HƯỚNG',
-    desc : 'Tiếp nhận nhu cầu, tư vấn',
-    desc2 : 'giải pháp phù hợp với sản ',
-    desc3 : 'phẩm và định vị thương hiệu.',
+    desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp  ',
+    desc2 : 'phù hợp với sản phẩm và',
+    desc3 : 'định vị thương hiệu.',
   },
   {
     num  : '2',
     img  : 'public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Thiết kế & hoàn thiện',
     title: 'THIẾT KẾ & HOÀN THIỆN',
-    desc : 'Xây dựng concept, chỉnh sửa',
-    desc2 : 'và tối ưu thiết kế trước khi',
+    desc : 'Xây dựng concept, chỉnh sửa ',
+    desc2 : 'và tối ưu thiết kế trước khi ',
     desc3 : 'sản xuất.',
   },
   {
@@ -199,7 +202,7 @@ const QUYTRINH_STEPS = [
     img  : 'public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
     alt  : 'In ấn & kiểm tra',
     title: 'IN ẤN & KIỂM TRA',
-    desc : 'Kiểm soát chất liệu, màu sắc',
+    desc : 'Kiểm soát chất liệu, màu sắc ',
     desc2: 'và chất lượng thành phẩm ',
     desc3: 'trong quá trình in.',
   },
@@ -352,17 +355,19 @@ const PARTNER_LOGOS = [
   },
 ];
 const FOOTER_DATA = {
-  desc    : 'Giải pháp thiết kế và in ấn bao bì đồng bộ cho thương hiệu và doanh nghiệp.',
+  desc    : 'Giải pháp thiết kế và in ấn bao bì đồng bộ',
+  desc2    : 'cho thương hiệu và doanh nghiệp.',
+
   contacts: [
-    { icon: '📞', label: 'Hotline: 0896 549 310 – 0962 510 180 (In ấn)',  href: 'tel:0896549310' },
-    { icon: '📞', label: 'Hotline: 033 387 7745 (Thiết kế)',               href: 'tel:0333877745' },
-    { icon: '✉️', label: 'Email: support@demeter.vn',                      href: 'mailto:support@demeter.vn' },
-    { icon: '📍', label: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh', href: '#' },
+    { icon: '📞', label: 'Hotline: 0896 549 310 – 0962 510 180 (In ấn)',   },
+    { icon: '📞', label: 'Hotline: 033 387 7745 (Thiết kế)',            },
+    { icon: '✉️', label: 'Email: support@demeter.vn',                      },
+    { icon: '📍', label: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh', },
   ],
   socials: [
-    { label: 'Facebook', icon: 'fb',   href: 'https://www.facebook.com/DemeterForBusiness' },   // ← thay href thật
+    { label: 'Facebook', icon: 'fb',   href: 'https://www.facebook.com/DemeterForBusiness' },   
     { label: 'Zalo',     icon: 'zalo', href: 'https://zalo.me/0896549310' },
-    { label: 'Điện thoại',  icon: '📞',   href: '0896 549 310' },   // ← thay href thật
+    { label: 'Điện thoại',  icon: 'phone',   href: '0896 549 310' },  
   ],
 };
 

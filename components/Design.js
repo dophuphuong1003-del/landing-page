@@ -3,7 +3,7 @@
 // ============================================================
 const ThietKe = (() => {
 
-  function _card({ icon, title, desc, img, alt }) {
+  function _card({ icon, title, desc, img, alt,title2 }) {
 
     return `
       <div class="tk-card reveal">
@@ -25,6 +25,7 @@ const ThietKe = (() => {
           <!-- TITLE -->
           <p class="tk-card-title">
             ${title}
+            ${title2}
           </p>
           <div class="tk-line"></div>
 
