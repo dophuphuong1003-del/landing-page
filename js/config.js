@@ -177,12 +177,12 @@ const QUYTRINH_STEPS = [
 ];
 
 const PROJECTS = [
-  { label: 'Trái cây sấy giòn – FOODOVI',      image: 'public/static/project/foodovi_dmt.png' },
-  { label: 'Cà phê hòa tan – UFO',             image: 'public/static/project/ufo_cafe_hoa_tan.jpg' },
-  { label: 'Hộp thức món Tết – HUE LEGEND',    image: 'public/static/project/set_qua_tet.jpg' },
-  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: 'public/static/project/rectangle_4485.png' },
-  { label: 'Mỳ Quảng – CATHIFOOD',             image: 'public/static/project/rectangle_4487.png' },
-  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',    image: 'public/static/project/rectangle_4509.png' },
+  { label: 'Trái cây sấy giòn – FOODOVI',      image: 'public/static/project_2/foodovi_dmt.png' },
+  { label: 'Cà phê hòa tan – UFO',             image: 'public/static/project_2/ufo_cafe_hoa_tan.jpg' },
+  { label: 'Hộp thức món Tết – HUE LEGEND',    image: 'public/static/project_2/set_qua_tet.jpg' },
+  { label: 'Ngũ cốc dinh dưỡng – HADALIFA',    image: 'public/static/project_2/rectangle_4485.png' },
+  { label: 'Mỳ Quảng – CATHIFOOD',             image: 'public/static/project_2/rectangle_4487.png' },
+  { label: 'Đặc sản Cố Đô – HUE ONE FOOD',     image: 'public/static/project_2/rectangle_4509.png' },
 ];
 
 
