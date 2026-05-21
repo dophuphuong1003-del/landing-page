@@ -10,7 +10,7 @@ const Hero = (() => {
 
         <!-- Banner -->
         <img
-          src="public/static/demeterbannerv2.jpg"
+          src="public/static/dmt_banner_new.jpg"
           alt="MyFarm Banner"
           class="hero-banner"
          

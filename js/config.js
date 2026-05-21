@@ -18,7 +18,7 @@ const PAIN_POINTS = [
 
   {
     image: "public/static/vấn đề/màu sắc.png",
-    h2:"Thiết kế thiếu nỗi bật",
+    h2:"Thiết kế thiếu nổi bật",
     text: "Bao bì chưa tạo được",
     text2: "dấu ấn thương hiệu"
   },
