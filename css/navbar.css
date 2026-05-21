@@ -204,7 +204,7 @@ button{
 
     width:240px;
 
-    background:rgba(10,35,20,.75);
+    background:rgba(54, 59, 56, 0.75);
     backdrop-filter:blur(18px);
 
     border-radius:16px;
@@ -253,12 +253,12 @@ button{
   }
 
   .nav-links li a:hover{
-    background:rgba(255,255,255,.08);
+    background:rgba(99, 182, 145, 0.08);
     color:#6dff9b;
   }
 
   .nav-links li a.active{
-    background:rgba(109,255,155,.18);
+    background:rgba(119, 162, 132, 0.18);
     color:#6dff9b;
   }
 
