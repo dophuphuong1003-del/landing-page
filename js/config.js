@@ -182,36 +182,33 @@ const QUYTRINH_STEPS = [
     img  : 'public/static/design/rectangle_4463.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Tư vấn & định hướng',
     title: 'TƯ VẤN & ĐỊNH HƯỚNG',
-    desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp  ',
-    desc2 : 'phù hợp với sản phẩm và',
-    desc3 : 'định vị thương hiệu.',
+    desc : 'Tiếp nhận nhu cầu, tư vấn giải pháp phù hợp với sản phẩm và định vị thương hiệu.',
+  
   },
   {
     num  : '2',
     img  : 'public/static/design/rectangle_4466.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Thiết kế & hoàn thiện',
     title: 'THIẾT KẾ & HOÀN THIỆN',
-    desc : 'Xây dựng concept, chỉnh sửa ',
-    desc2 : 'và tối ưu thiết kế trước khi ',
-    desc3 : 'sản xuất.',
+    desc : 'Xây dựng concept, chỉnh sửa và tối ưu thiết kế trước khi sản xuất. ',
+  
   },
   {
     num  : '3',
     img  : 'public/static/design/rectangle_4508.png',   // ← thay đường dẫn ảnh thật
     alt  : 'In ấn & kiểm tra',
     title: 'IN ẤN & KIỂM TRA',
-    desc : 'Kiểm soát chất liệu, màu sắc ',
-    desc2: 'và chất lượng thành phẩm ',
-    desc3: 'trong quá trình in.',
+    desc : 'Kiểm soát chất liệu, màu sắc và chất lượng thành phẩm trong quá trình in.',
+    desc2: ' ',
+    desc3: '',
   },
   {
     num  : '4',
     img  : 'public/static/design/rectangle_4464.png',   // ← thay đường dẫn ảnh thật
     alt  : 'Bàn giao thành phẩm',
     title: 'BÀN GIAO THÀNH PHẨM',
-    desc : 'Hoàn thiện gia công ',
-    desc2 : 'bàn giao đúng tiến độ ',
-    desc3 : 'theo yêu cầu dự án.',
+    desc : 'Hoàn thiện gia công bàn giao đúng tiến độ theo yêu cầu dự án.',
+ 
   },
 ];
 

@@ -23,8 +23,7 @@ const QuyTrinh = (() => {
         <div class="qt-step-body">
           <p class="qt-step-title">${title}</p>
           <p class="qt-step-desc">${desc}</p>
-          <p class="qt-step-desc">${desc2}</p>
-          <p class="qt-step-desc">${desc3}</p>
+          
         </div>
       </div>`;
   }
