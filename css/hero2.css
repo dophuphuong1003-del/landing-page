@@ -1,0 +1,223 @@
+/* ============================================================
+   HERO2.CSS
+   ============================================================ */
+
+#hero2 {
+  background: #242635;
+  margin-top: 80px; /* thêm dòng này */
+  padding: 82px 6vw 4rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 35px 35px;
+}
+
+/* họa tiết sáng mờ góc phải trên */
+#hero2::after {
+  content          : '';
+  position         : absolute;
+  top: -160px; right: -160px;
+  width: 480px; height: 480px;
+  border-radius    : 50%;
+  background       : radial-gradient(circle, rgba(45,158,95,.07) 0%, transparent 65%);
+  pointer-events   : none;
+}
+
+/* ===========================================================
+   HÀNG TRÊN – tiêu đề + logo + badges
+   =========================================================== */
+
+.h2-top-row {
+  max-width : 1100px;
+  margin    : 0 auto 2.5rem;
+}
+
+/* Tiêu đề lớn */
+.h2-title {
+  font-size   : clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight : 900;
+  color       : #fff;
+  line-height : 1.1;
+}
+
+/* Dòng 2: text + logo + badges trên 1 hàng */
+.h2-title-line2 {
+  display     : inline-flex;
+  align-items : center;
+  gap         : .75rem;
+  flex-wrap   : wrap;
+}
+
+/* Nhóm logo + badges sát nhau */
+.h2-logo-badge-group {
+  display     : inline-flex;
+  align-items : center;
+  gap         : .5rem;
+  flex-shrink : 0;
+}
+
+/* Logo tròn */
+.h2-logo {
+  width         : 74px;
+  height        : 74px;
+  border-radius : 50%;
+  object-fit    : contain;
+  border        : 3px solid rgba(255,255,255,.2);
+  background    : rgba(255,255,255,.06);
+  display       : block;
+  flex-shrink   : 0;
+}
+
+/* placeholder khi chưa có logo */
+.h2-logo-empty {
+  width         : 74px;
+  height        : 74px;
+  border-radius : 50%;
+  border        : 2px dashed rgba(255,255,255,.25);
+  background    : rgba(255,255,255,.04);
+  flex-shrink   : 0;
+}
+
+/* Badges: xếp dọc bên phải logo */
+.h2-badges {
+  display        : flex;
+  flex-direction : column;
+  gap            : .4rem;
+  flex-shrink    : 0;
+}
+
+.h2-badge {
+  display       : inline-block;
+  background    : #2d9e5f;
+  color         : #fff;
+  font-size     : .6rem;
+  font-weight   : 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding       : .3rem .9rem;
+  border-radius : 5px;
+  white-space   : nowrap;
+  line-height   : 1.4;
+}
+
+/* ===========================================================
+   HÀNG DƯỚI – ảnh trái | text phải
+   =========================================================== */
+
+.h2-bottom-row {
+  max-width : 1100px;
+  margin    : 0 auto;
+  display   : grid;
+  grid-template-columns: 1fr 1fr;
+  gap       : 4rem;
+  align-items: flex-end;
+}
+
+/* --- CỘT ẢNH --- */
+.h2-img-col {
+  position       : relative;
+  display        : flex;
+  align-items    : flex-end;
+  justify-content: center;
+  min-height     : 340px;
+}
+
+.h2-img {
+  position      : relative;
+  z-index       : 2;
+  width         : 100%;
+  max-height    : 450px;
+  object-fit    : contain;
+  object-position: bottom;
+  display       : block;
+  filter        : drop-shadow(0 8px 32px rgba(0,0,0,.28));
+}
+
+/* placeholder ảnh */
+.h2-img-ph {
+  display        : none;
+  position       : absolute;
+  inset          : 0;
+  z-index        : 2;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  gap            : .4rem;
+  font-size      : 2.5rem;
+  color          : rgba(255,255,255,.4);
+}
+.h2-img-ph small { font-size: .72rem; }
+
+/* --- CỘT TEXT --- */
+.h2-text-col {
+  max-width      : 880px;
+  padding-bottom : 3rem;
+  display        : flex;
+  flex-direction : column;
+  gap            : 1rem;
+}
+
+.h2-para {
+  max-width  : 680px;
+  font-size  : .9rem;
+  color      : rgba(255,255,255,.68);
+  line-height: 1.5;
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+
+@media (max-width: 900px) {
+  #hero2         { padding: 100px 5vw 0; }
+  .h2-bottom-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .h2-img-col    { min-height: 260px; }
+  .h2-text-col   { padding-bottom: 2rem; }
+}
+
+@media (max-width: 580px) {
+
+  .h2-title-line2 {
+    display: block;
+  }
+
+  .h2-logo-badge-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: .6rem;
+
+    margin-top: .9rem;
+  }
+
+  .h2-logo,
+  .h2-logo-empty {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+  }
+
+  .h2-badges {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .25rem;
+  }
+
+  .h2-badge {
+    font-size: .5rem;
+
+    padding: .22rem .55rem;
+
+    line-height: 1.2;
+  }
+
+  .h2-title {
+    line-height: 1.08;
+  }
+}

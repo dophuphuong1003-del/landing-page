@@ -12,7 +12,7 @@ const Navbar = (() => {
     <nav id="navbar">
       <div class="nav-inner">
 
-        <a href="#hero" class="nav-logo">
+        <a href="./index.html" class="nav-logo">
           <img src="public/static/logo_dmt.png" alt="DEMETER" class="logo-nav" />
         </a>
 
@@ -24,7 +24,7 @@ const Navbar = (() => {
           href="tel:${CONFIG.phone.replace(/\s/g,'')}" 
           class="nav-contact-btn"
         >
-          📞 Liên hệ ngay
+          📞 
         </a>
 
         <div class="nav-hamburger" id="navHamburger">

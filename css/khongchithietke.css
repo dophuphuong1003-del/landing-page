@@ -1,0 +1,250 @@
+/* ============================================================
+   KHONGCHITHIETKE.CSS – Section Không Chỉ Thiết Kế
+   ============================================================ */
+
+#khongchithietke {
+  background: #eaf7f0;           /* nền xanh lá rất nhạt như ảnh */
+  padding: 72px 6vw;
+  border-radius: 25px;
+}
+
+.kctk-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  align-items: center;
+}
+
+/* ── NỘI DUNG TRÁI ── */
+.kctk-content { }
+
+.kctk-label {
+  font-size: 40px;
+  font-weight: 800;
+  color: #242635;
+  margin-bottom: .3rem;
+}
+
+.kctk-title {
+  font-size: 35px;
+  font-weight: 800;
+  color: #149045;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.kctk-desc {
+  font-size: 16px;
+  color: #242635;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ── 4 FEATURES (2×2 grid) ── */
+.kctk-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+}
+
+.kctk-feat {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.kctk-feat-icon-wrap {
+  width: 60px; height: 60px;
+  flex-shrink: 0;
+  position: relative;
+  background: #fff;
+  border-radius: 50px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 12px rgba(45,158,95,.12);
+}
+
+.kctk-feat-icon {
+  width: 60px; height: 60px;
+  object-fit: contain; display: block;
+}
+
+.kctk-feat-placeholder {
+  display: none;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.kctk-feat-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+/* ── ẢNH PHẢI ── */
+.kctk-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.kctk-img {
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,.15));
+}
+
+.kctk-img-placeholder {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 2.5rem;
+}
+
+.kctk-placeholder-text {
+  font-size: .72rem;
+  color: var(--mid);
+}
+
+/* ── RESPONSIVE ── */
+/* =========================================================
+   MOBILE REDESIGN
+========================================================= */
+
+@media (max-width: 768px) {
+
+  #khongchithietke {
+    padding: 54px 5vw;
+    overflow: hidden;
+  }
+
+  /* ================= LAYOUT ================= */
+  .kctk-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  /* ================= IMAGE ================= */
+
+  .kctk-img-wrap {
+    order: -1;
+
+    width: 100%;
+    min-height: unset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kctk-img {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    max-height: unset;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+  }
+
+  .kctk-img-deco {
+    width: 72%;
+    height: 78%;
+  }
+
+  /* ================= CONTENT ================= */
+
+  .kctk-content {
+    width: 100%;
+  }
+
+  .kctk-label {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .kctk-title {
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .kctk-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  /* ================= FEATURES ================= */
+
+  .kctk-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+  /* card */
+
+  .kctk-feat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 12px;
+    border-radius: 16px;
+    min-height: 72px;
+  }
+
+  /* icon */
+
+  .kctk-feat-icon-wrap {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kctk-feat-icon {
+    width: 40px;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  /* label */
+
+  .kctk-feat-label {
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 600;
+
+    color: #1d1d1d;
+  }
+
+  /* placeholder */
+
+  .kctk-feat-placeholder {
+    display: none;
+  }
+}
+

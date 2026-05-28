@@ -1,0 +1,63 @@
+/* ============================================================
+   TICKER.CSS – Marquee chạy phải qua trái
+   ============================================================ */
+
+#ticker {
+  background: #242635;           
+  overflow: hidden;
+  padding: .85rem 0;
+  width: 100%;
+}
+
+/* ── TRACK chạy liên tục ── */
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: ticker-scroll 22s linear infinite;
+}
+
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% vì nhân đôi item */
+}
+
+/* ── MỖI ITEM ── */
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── NGÔI SAO PHÂN CÁCH ── */
+.ticker-star {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  flex-shrink: 0;
+}
+
+/* ── TEXT WRAP ── */
+.ticker-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.ticker-text {
+  font-size: .82rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: .02em;
+}
+
+.ticker-sub {
+  font-size: .72rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: .01em;
+}

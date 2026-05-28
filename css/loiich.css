@@ -1,0 +1,299 @@
+/* ============================================================
+   LOIICH.CSS – Responsive ổn định Web + Mobile
+============================================================ */
+
+#loiich {
+  padding: 64px 4vw;
+  background: #EEF7EE;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.li-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.li-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+/* ============================================================
+   BODY
+============================================================ */
+
+.li-body {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 420px 1fr;
+
+  gap: 2rem;
+  align-items: center;
+}
+
+/* ============================================================
+   LEFT + RIGHT
+============================================================ */
+
+.li-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ============================================================
+   ITEM
+============================================================ */
+
+.li-item {
+  display: grid;
+
+  grid-template-columns: 72px 1fr;
+
+  column-gap: 1rem;
+  row-gap: .7rem;
+
+  align-items: start;
+}
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.li-num {
+  font-size: 4.5rem;
+  font-weight: 900;
+
+  line-height: .9;
+  font-style: italic;
+
+  color: #242635;
+
+  white-space: nowrap;
+}
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.li-item-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-left: 20px;
+  color: var(--dark);
+
+  text-transform: uppercase;
+  letter-spacing: .03em;
+
+  line-height: 1.05;
+
+  max-width: 195px;
+
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.li-item-desc {
+  grid-column: 2;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: var(--mid);
+
+  max-width: 420px;
+}
+
+/* ============================================================
+   CENTER
+============================================================ */
+
+.li-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.li-center-img {
+  width: 100%;
+  max-width: 520px;
+
+  height: auto;
+
+  object-fit: contain;
+  display: block;
+}
+
+.li-center-placeholder {
+  display: none;
+  font-size: 2rem;
+}
+
+/* ============================================================
+   RESPONSIVE TABLET
+============================================================ */
+
+@media (max-width: 1024px) {
+
+  .li-body {
+    grid-template-columns: 1fr 320px 1fr;
+    gap: 1.5rem;
+  }
+
+  .li-num {
+    font-size: 3.5rem;
+  }
+
+  .li-item-title {
+    font-size: 1.2rem;
+    max-width: 180px;
+  }
+
+  .li-item-desc {
+    font-size: .92rem;
+  }
+
+  .li-center-img {
+    max-width: 360px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 768px) {
+
+  #loiich {
+    padding: 48px 20px;
+    border-radius: 24px;
+  }
+
+  /* BODY */
+
+  .li-body {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem 1.2rem;
+  }
+
+  /* CENTER */
+
+  .li-center {
+    grid-column: 1 / -1;
+
+    order: -1;
+
+    margin-bottom: .5rem;
+  }
+
+  .li-center-img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* GỘP CỘT */
+
+  .li-col,
+  .li-col-right {
+    display: contents;
+  }
+
+  /* ITEM */
+
+  .li-item {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: .7rem;
+
+    min-width: 0;
+  }
+
+  /* HEADER ITEM */
+
+  .li-item-head {
+    display: flex;
+    align-items: flex-start;
+
+    gap: .55rem;
+  }
+
+  .li-num {
+    font-size: 2.1rem;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    flex-shrink: 0;
+  }
+
+  .li-item-title {
+    font-size: .92rem;
+
+    line-height: 1.1;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    word-break: break-word;
+  }
+
+  .li-item-desc {
+    grid-column: auto;
+
+    font-size: .88rem;
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   MOBILE NHỎ
+============================================================ */
+
+@media (max-width: 480px) {
+
+  .li-body {
+    gap: 1.8rem .9rem;
+  }
+
+  .li-num {
+    font-size: 1.8rem;
+  }
+
+  .li-item-title {
+    font-size: .82rem;
+  }
+
+  .li-item-desc {
+    font-size: .8rem;
+    line-height: 1.6;
+  }
+
+  .li-center-img {
+    max-width: 240px;
+  }
+}

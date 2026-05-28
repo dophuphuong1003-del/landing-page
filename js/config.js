@@ -5,9 +5,9 @@
 const CONFIG = {
   companyName : 'DEMETER',
   slogan      : 'IN ẤN - VẬT TƯ',
-  tagline     : 'IN HỘP GIẤY MỀM THEO YÊU CẦU',
+  tagline     : 'IN ẤN - THIẾT KẾ',
   sub         : 'Nâng tầm sản phẩm – Chinh phục khách hàng',
-  phone       : '0896549310',
+  phone       : '0962510180',
   email       : 'support@demeter.vn',
   address     : 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh',
   zalo        : '0896549310',
@@ -176,8 +176,6 @@ const THIETKE_CARDS = [
 ];
 
 
-
-
 const QUYTRINH_STEPS = [
   {
     num  : '1',
@@ -231,12 +229,15 @@ const PROJECTS = [
 const BRANDS = ['Rosé', 'MỘC', 'NAM DƯỢC', 'hebe', 'The Organic'];
 
 const NAV_LINKS = [
-  { label: 'GIẢI PHÁP',           href: '#solutions' },
-  { label: 'SẢN PHẨM',            href: '#boxtypes' },
-  { label: 'THIẾT KẾ',            href: '#thietke' },
-  { label: 'QUY TRÌNH',             href: '#quytrinh' },
-  { label: 'ĐỐI TÁC',           href: '#partners' },
-  { label: 'DỰ ÁN',               href: '#projects' },
+
+  { label: 'GIỚI THIỆU', href: './gioithieu2.html' },
+  { label: 'GIẢI PHÁP', href: './index.html#tieuthuan' },
+  { label: 'SẢN PHẨM', href: './index.html#boxtypes' },
+  { label: 'THIẾT KẾ', href: './index.html#thietke' },
+  { label: 'QUY TRÌNH', href: './index.html#quytrinh' },
+  { label: 'ĐỐI TÁC', href: './index.html#partners' },
+  { label: 'DỰ ÁN', href: './index.html#projects' },
+  { label: 'LIÊN HỆ', href: './contact.html' },
 ];
 
 
@@ -359,15 +360,144 @@ const FOOTER_DATA = {
   desc2    : 'cho thương hiệu và doanh nghiệp.',
 
   contacts: [
-    { icon: '📞', label: 'Hotline: 0896 549 310 – 0962 510 180 (In ấn)',   },
-    { icon: '📞', label: 'Hotline: 033 387 7745 (Thiết kế)',            },
+    { icon: '📞', label: 'Hotline: 0962510180',   },
     { icon: '✉️', label: 'Email: support@demeter.vn',                      },
     { icon: '📍', label: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, TP. Hồ Chí Minh', },
   ],
   socials: [
     { label: 'Facebook', icon: 'fb',   href: 'https://www.facebook.com/DemeterForBusiness' },   
-    { label: 'Zalo',     icon: 'zalo', href: 'https://zalo.me/0896549310' },
-    { label: 'Điện thoại',  icon: 'phone',   href: 'tel:0896549310' },  
+    { label: 'Zalo',     icon: 'zalo', href: 'https://zalo.me/4364551930274813557' },
+    { label: 'Điện thoại',  icon: 'phone',   href: 'tel:0962510180' },  
   ],
 };
+const TICKER_DATA = [
+  { text: 'Giải Pháp Bao Bì Tối Ưu', sub: 'Cho Thương Hiệu Của Bạn' },
+  { text: 'Giải Pháp Bao Bì Tối Ưu', sub: 'Cho Thương Hiệu Của Bạn' },
+  { text: 'Giải Pháp Bao Bì Tối Ưu', sub: 'Cho Thương Hiệu Của Bạn' },
+  { text: 'Giải Pháp Bao Bì Tối Ưu', sub: 'Cho Thương Hiệu Của Bạn' },
+  { text: 'Giải Pháp Bao Bì Tối Ưu', sub: 'Cho Thương Hiệu Của Bạn' },
+];
 
+const GIOITHIEU_DATA = {
+  label  : 'Bao Bì Chất Lượng',
+  title  : 'Thể Hiện Sự Chuyên Nghiệp Và Chỉn Chu Của Doanh Nghiệp',
+  desc   : 'Bao bì được xem là "bộ mặt" của thương hiệu, là điểm chạm thị giác đầu tiên với khách hàng. Không chỉ đơn thuần là vật dụng bảo vệ sản phẩm, bao bì còn đóng vai trò quan trọng trong việc định vị và xây dựng hình ảnh doanh nghiệp.',
+  img    : 'public/static/giaiphap_dmt.jpg',   // ← thay đường dẫn ảnh thật (ảnh 2 người + hộp sản phẩm)
+  imgAlt : 'Đội ngũ Demeter for Business',
+};
+// ============================================================
+//  KHÔNG CHỈ THIẾT KẾ – data
+// ============================================================
+const KHONGCHITHIETKE_DATA = {
+  label  : 'Không Chỉ Thiết Kế',
+  title  : 'Chúng Tôi Tạo Ra Thành Phẩm',
+  desc   : 'DEMETER FOR BUSINESS cung cấp giải pháp bao bì toàn diện từ khâu thiết kế sáng tạo đến sản xuất thành phẩm. Cùng với đội ngũ thiết kế chuyên nghiệp, chúng tôi sử dụng hệ thống vật tư, máy in chính hãng và liên tục cập nhật các dòng máy in thế hệ mới, cam kết mang đến những thành phẩm bao bì sắc nét và hoàn hảo nhất.',
+  img    : '/public/static/group_14588.png',   // ← ảnh 2 người (PNG nền trong suốt)
+  imgAlt : 'Đội ngũ Demeter for Business',
+  features: [
+    { icon: '/public/static/design/group_14584.png', label: 'Thiết kế sáng tạo' },
+    { icon: '/public/static/design/group_14585.png', label: 'Vật tư in ấn chính hãng' },
+    { icon: '/public/static/design/group_14586.png', label: 'Máy in thế hệ mới' },
+    { icon: '/public/static/design/group_14587.png', label: 'Thành phẩm sắc nét' },
+  ],
+};
+// ============================================================
+//  3 TIÊU CHUẨN CỐT LÕI – data
+// ============================================================
+const TIEUCHUAN_DATA = {
+  label : '3 Tiêu Chuẩn Cốt Lõi',
+  title : 'Của Bao Bì Chuyên Nghiệp',
+  intro : 'Để sở hữu một mẫu bao bì chỉn chu, bắt mắt và mang lại hiệu quả thực tế, sản phẩm cần đáp ứng được 3 tiêu chuẩn cốt lõi sau:',
+  items : [
+    {
+      num  : '01',
+      title: 'THIẾT KẾ CÓ CHIẾN LƯỢC',
+      icon : '/public/static/tieuchuan/group_14552.png',        // ← icon thiết kế
+      desc : 'Một bản thiết kế thành công phải kết hợp hài hòa giữa tính thẩm mỹ và thông điệp thương hiệu. Bố cục, màu sắc và cấu trúc bao bì cần được tính toán kỹ lưỡng để thu hút đúng tệp khách hàng mục tiêu và tạo sự khác biệt, nổi bật trên quầy kệ.',
+    },
+    {
+      num  : '02',
+      title: 'CHẤT LIỆU CÓ CHỌN LỌC',
+      icon : '/public/static/tieuchuan/group_14539.png',        // ← icon chất liệu
+      desc : 'Bản thiết kế chỉ thực sự tỏa sáng khi được hiện thực hóa trên chất liệu tương xứng. Việc sử dụng chất liệu kém sẽ làm sai lệch màu sắc và làm giảm trải nghiệm cảm nhận của người tiêu dùng. Lựa chọn chất liệu phù hợp, chất lượng cao là nền tảng bắt buộc.',
+    },
+    {
+      num  : '03',
+      title: 'IN ẤN CÓ CÔNG NGHỆ',
+      icon : '/public/static/tieuchuan/group_14551.png',        // ← icon in ấn
+      desc : 'Hệ thống máy in quyết định trực tiếp đến độ sắc nét của thành phẩm. Máy in thế hệ mới không chỉ tái tạo màu sắc chuẩn xác, chân thực so với bản và thiết kế mà còn tối ưu hóa tốc độ sản xuất, giúp doanh nghiệp tiết kiệm thời gian.',
+    },
+  ],
+};
+const HERO2_DATA = {
+  titleLine1: 'Giải Pháp Bao Bì Tối Ưu',
+  titleLine2: 'Cho Thương Hiệu',
+  logoSrc   : '/public/static/footer/group_14523.png',                           // ← 'static/logo_DMT.png'
+  badges    : ['THIẾT KẾ SÁNG TẠO', 'IN ẤN CHUYÊN NGHIỆP'],
+  img       : '/public/static/group_14588.png',       // ← PNG nền trong suốt (ảnh 2 người)
+  imgAlt    : 'Đội ngũ Demeter for Business',
+  desc      : 'DEMETER FOR BUSINESS là đơn vị chuyên cung cấp giải pháp tổng thể trong lĩnh vực thiết kế, in ấn và hoàn thiện bao bì. Với hệ sinh thái dịch vụ khép kín, chúng tôi giúp doanh nghiệp tối ưu thời gian, chi phí và nâng cao trải nghiệm sản phẩm trên thị trường.\n\nTừ ý tưởng thiết kế, lựa chọn chất liệu, in ấn đến hoàn thiện thành phẩm, DEMETER FOR BUSINESS mang đến một quy trình liên mạch, giúp khách hàng dễ dàng sở hữu những sản phẩm bao bì phù hợp với mục tiêu kinh doanh, ngành hàng và định vị thương hiệu.\n\nVới định hướng phát triển bền vững, chúng tôi luôn theo đuổi giải pháp không chỉ đẹp về hình thức mà còn tối ưu về công năng, chi phí và trải nghiệm sử dụng.',
+};
+// ============================================================
+//  SỨ MỆNH & TẦM NHÌN
+// ============================================================
+const SUMENH_DATA = [
+  {
+    icon : 'public/static/sumenh_tamnhin/18370444_1.png',
+    title: 'Sứ Mệnh',
+    desc : 'Đồng hành và hỗ trợ các nhà sản xuất, doanh nghiệp, giúp sản phẩm vươn tầm và chinh phục người tiêu dùng.',
+  },
+  {
+    icon : 'public/static/sumenh_tamnhin/3442495_1.png',
+    title: 'Tầm Nhìn',
+    desc : 'Trở thành nhà cung cấp giải pháp bao bì toàn diện hàng đầu, được tin tưởng lựa chọn bởi các thương hiệu lớn trong và ngoài nước.',
+  },
+];
+ 
+// ============================================================
+//  LỢI ÍCH KHI ĐỒNG HÀNH
+// ============================================================
+const LOIICH_DATA = {
+  title   : 'Lợi Ích Khi Đồng Hành Cùng Chúng Tôi',
+  bigText1: '',
+  bigText2: '',
+  bigText3: '',
+  centerIcon: 'public/static/sumenh_tamnhin/group_14577.png',   // ← icon lớn ở giữa (PNG nền trong suốt)
+  items: [
+    { num: '01', title: 'Giải Pháp Khép Kín',      desc: 'Từ thiết kế đến in ấn thành phẩm, chúng tôi đồng hành toàn bộ quy trình, giúp doanh nghiệp tiết kiệm thời gian và chi phí phối hợp.' },
+    { num: '02', title: 'Tối Ưu Chi Phí',           desc: 'Hệ thống máy in hiện đại, nguồn nguyên liệu ổn định giúp tối ưu chi phí sản xuất mà vẫn đảm bảo chất lượng thành phẩm cao nhất.' },
+    { num: '03', title: 'Nâng Tầm Thương Hiệu',     desc: 'Bao bì chỉn chu, sắc nét là công cụ marketing mạnh mẽ. DEMETER giúp thương hiệu gây ấn tượng ngay từ lần tiếp xúc đầu tiên với khách hàng.' },
+    { num: '04', title: 'Hướng Đến Bền Vững',       desc: 'Chúng tôi ưu tiên các giải pháp vật liệu thân thiện môi trường, đáp ứng xu hướng tiêu dùng xanh và trách nhiệm xã hội của doanh nghiệp.' },
+  ],
+};
+ 
+// ============================================================
+//  KHÁM PHÁ GIẢI PHÁP – Accordion
+// ============================================================
+const KHAMPHA_DATA = {
+  label : 'Khám Phá Các Giải Pháp Tại',
+  title : 'DEMETER FOR BUSINESS',
+  img    : 'YOUR_GIOITHIEU_IMAGE.jpg',
+  imgAlt : 'Đội ngũ Demeter for Business',
+  items : [
+    { title: 'Thiết Kế Bao Bì Sáng Tạo',      content: 'Định hướng thiết kế theo ngành hàng, tối ưu nhận diện thương hiệu, giúp sản phẩm nổi bật và dễ ghi nhớ.' },
+    { title: 'In Ấn Bao Bì Chất Lượng Cao',   content: 'Ứng dụng công nghệ in Offset, Kỹ thuật số, Flexo, UV, Nhũ kim... đáp ứng đa dạng nhu cầu từ đơn hàng nhỏ đến số lượng lớn.' },
+    { title: 'Giá Công Bao Bì Cao Cấp',        content: 'Cán màng, ép kim, dập nổi, phủ UV, chống thấm... giúp sản phẩm tăng tính thẩm mỹ và giá trị cảm nhận.' },
+    { title: 'Tư Vấn Chiến Lược Bao Bì Tối Ưu', content: 'Đề xuất giải pháp bền vững, tiết kiệm chi phí, phù hợp thị trường và định hướng phát triển của doanh nghiệp.' },
+  ],
+};
+const LIENHE2_DATA = {
+  titleLine1: 'Hiện Thực Hoá',
+  titleLine2: 'Thương Hiệu Của Bạn Cùng',
+  titleLine3: 'DEMETER FOR BUSINESS',
+  logoSrc   : '/public/static/footer/group_14523.png',                          // ← đường dẫn logo tròn
+  badges    : ['THIẾT KẾ SÁNG TẠO', 'IN ẤN CHUYÊN NGHIỆP'],
+  sub       : 'Trao Đổi Thêm Về Ý Tưởng Của Bạn Và Bắt Đầu Tạo Ra Thương Hiệu Riêng Cho Doanh Nghiệp',
+  btnText   : 'BRIEF FORM',
+  btnHref   : 'https://forms.gle/1gFcuP7u9isDf3qEA',
+  contacts  : [
+    { icon: 'phone', label: 'Hotline:',  value: '(+84) 903 344 277' },
+    { icon: 'email', label: 'Email:',    value: 'support@demeter.vn' },
+    { icon: 'addr',  label: 'Địa chỉ:', value: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh, Việt Nam' },
+  ],
+};

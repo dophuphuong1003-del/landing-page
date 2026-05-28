@@ -1,0 +1,331 @@
+/* ============================================================
+   KHAMPHA.CSS
+============================================================ */
+
+#khampha {
+  padding: 90px 6vw;
+  background: #f5f5f5;
+}
+
+/* ================= CONTAINER ================= */
+
+.kp-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* ============================================================
+   LEFT
+============================================================ */
+
+.kp-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+
+.kp-header {
+  margin-bottom: 32px;
+}
+
+.kp-label {
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #26233d;
+  margin-bottom: 4px;
+}
+
+.kp-title {
+  font-size: 38px;
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: #10a344;
+
+  letter-spacing: -2px;
+}
+
+/* ============================================================
+   LIST
+============================================================ */
+
+.kp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ================= ITEM ================= */
+
+.kp-item {
+  background: #fff;
+
+  border-radius: 12px;
+  border: 1px solid #ececec;
+
+  overflow: hidden;
+
+  transition:
+    border-color .35s ease,
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.kp-item:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* open */
+
+.kp-item.kp-open {
+  border-color: #10a344;
+}
+
+/* ================= BUTTON ================= */
+
+.kp-trigger {
+  width: 100%;
+
+  background: transparent;
+  border: none;
+
+  padding: 22px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+/* ================= TITLE ================= */
+
+.kp-item-title {
+  
+  font-size: 16px;
+  font-weight: 600;
+  color: #242635;
+  text-transform: uppercase;
+}
+
+/* ================= ICON ================= */
+
+.kp-icon {
+  font-size: 36px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  color: #26233d;
+
+  transition: transform .3s ease;
+}
+
+.kp-open .kp-icon {
+  transform: rotate(90deg);
+}
+
+/* ================= PANEL ================= */
+
+.kp-panel {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition:
+    max-height .35s ease,
+    padding .35s ease;
+}
+
+.kp-open .kp-panel {
+  padding: 0 24px 24px;
+}
+
+.kp-content {
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 400;
+  color: #242635;
+}
+
+/* ============================================================
+   RIGHT
+============================================================ */
+
+.kp-right {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 120px;
+
+  height: fit-content;
+
+  align-self: start;
+}
+
+/* ================= IMAGE WRAP ================= */
+
+.kp-img-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 460px;
+
+  aspect-ratio: 1 / 1;
+}
+
+/* nền xám */
+
+.kp-img-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: #dcdcdc;
+
+  border-radius: 18px;
+
+  z-index: 1;
+}
+
+/* hình vuông xanh */
+
+.kp-shape {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  background: #10a344;
+
+  border-radius: 10px;
+
+  right: -40px;
+  bottom: 40px;
+
+  z-index: 3;
+}
+
+/* ================= IMAGE ================= */
+
+.kp-img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  z-index: 2;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 768px) {
+
+  #khampha {
+    padding: 60px 24px;
+  }
+
+  /* layout */
+
+  .kp-inner {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  /* IMAGE */
+
+  .kp-right {
+    position: relative !important;
+
+    top: unset !important;
+    right: unset !important;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    order: -1; /* ảnh lên trên */
+  }
+
+  .kp-img-wrap {
+    position: relative;
+
+    width: 100%;
+    max-width: 320px;
+
+    margin: 0 auto;
+  }
+
+  .kp-img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+  }
+
+  /* shape */
+
+  .kp-shape {
+    width: 80px;
+    height: 80px;
+
+    right: -10px;
+    bottom: 20px;
+  }
+
+  /* TEXT */
+
+  .kp-label {
+    font-size: 32px;
+  }
+
+  .kp-title {
+    font-size: 40px;
+  }
+
+  .kp-trigger {
+    padding: 18px;
+  }
+
+  .kp-item-title {
+    font-size: 14px;
+  }
+
+  /* accordion */
+
+  .kp-panel {
+    overflow: hidden;
+
+    transition: max-height .35s ease;
+  }
+
+}

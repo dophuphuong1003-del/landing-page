@@ -1,0 +1,31 @@
+/* SECTION */
+#process2-section{
+  position:relative;
+}
+
+
+/* IMAGE */
+.process-image{
+  width:100%;
+  display:block;
+
+  transition:
+    transform .45s ease,
+    filter .45s ease;
+}
+
+/* HOVER EFFECT */
+.banner-link:hover .banner-image{
+  transform:scale(1.02);
+  filter:brightness(.95);
+}
+
+/* OVERLAY */
+.banner-overlay{
+  position:absolute;
+  inset:0;
+
+  pointer-events:none; /* QUAN TRỌNG */
+
+  z-index:1;
+}

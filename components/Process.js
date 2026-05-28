@@ -30,18 +30,36 @@ const QuyTrinh = (() => {
   }
 
   function render() {
-    return `
-      <section id="quytrinh">
-        <div class="qt-header reveal">
-          <p class="qt-label">Quy Trình Thiết Kế &amp; In Ấn Bao Bì</p>
-          <h2 class="qt-title">Từ Ý Tưởng Đến Thành Phẩm</h2>
-          <p class="qt-sub">${CONFIG.companyName} FOR BUSINESS xây dựng quy trình làm việc rõ ràng nhằm đảm bảo tính thẩm mỹ, chất lượng in ấn và tiến độ triển khai cho từng dự án bao bì.</p>
+  return `
+    <section id="quytrinh">
+
+      <div class="qt-header reveal">
+
+        <!-- LEFT -->
+        <div class="qt-header-left">
+          <p class="qt-label">
+            Quy Trình Thiết Kế &amp; In Ấn Bao Bì
+          </p>
+
+          <h2 class="qt-title">
+            Từ Ý Tưởng Đến Thành Phẩm
+          </h2>
         </div>
-        <div class="qt-grid">
-          ${QUYTRINH_STEPS.map(_step).join('')}
-        </div>
-      </section>`;
-  }
+
+        <!-- RIGHT -->
+        <p class="qt-sub">
+          ${CONFIG.companyName} FOR BUSINESS xây dựng quy trình làm việc rõ ràng nhằm đảm bảo tính thẩm mỹ, chất lượng in ấn và tiến độ triển khai cho từng dự án bao bì.
+        </p>
+
+      </div>
+
+      <div class="qt-grid">
+        ${QUYTRINH_STEPS.map(_step).join('')}
+      </div>
+
+    </section>
+  `;
+}
 
   function init() {}
 

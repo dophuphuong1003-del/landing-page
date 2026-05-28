@@ -71,7 +71,7 @@ const Solutions = (() => {
           <div class="solutions-btn-wrap">
 
             <a
-              href="https://drive.google.com/file/d/1x-LCc7lhnCofnqQqNwvGqwJOFED4jsQ9/view"
+              href="https://drive.google.com/file/d/1JfwUfUs7wGvkvm0D172S2xejOvPZuvN6/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               class="solutions-btn"

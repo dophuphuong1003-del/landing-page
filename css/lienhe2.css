@@ -1,0 +1,339 @@
+/* ============================================================
+   LIENHE2.CSS – Section Liên Hệ
+   ============================================================ */
+
+#lienhe2 {
+  margin-left: 120px;
+  padding: 0px 6vw;
+  background: var(--white);
+
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.lh2-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+/* ============================================================
+   HEADER / TITLE
+   ============================================================ */
+
+.lh2-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 2rem;
+}
+
+.lh2-title-wrap {
+  max-width: 760px;
+}
+
+/* TITLE + LOGO ROW */
+
+.lh2-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* QUAN TRỌNG */
+  gap: 2rem;
+  margin-top: 6rem;
+  
+}
+
+/* TITLE */
+
+.lh2-title {
+  font-size: 50px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  margin: 0; /* tránh lệch */
+
+  color: var(--dark);
+}
+
+
+.lh2-title-brand {
+  font-size: 60px;
+  color: #2d9e5f;
+  display: block;
+}
+
+/* ============================================================
+   LOGO + BADGES
+   ============================================================ */
+
+
+.lh2-logo-wrap {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start; /* thay center */
+
+  justify-content: flex-start;
+
+  gap: .6rem;
+
+  flex-shrink: 0;
+
+  padding-top: 4px; /* fine tuning */
+}
+
+.lh2-logo-img {
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.lh2-logo-fallback {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  background: #eef7ee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.5rem;
+}
+
+.lh2-badges {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.lh2-badge {
+  margin-top: -5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2d9e5f;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .4rem .85rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.lh2-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* ============================================================
+   LEFT
+   ============================================================ */
+
+.lh2-left {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.lh2-sub {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  color: var(--dark);
+  line-height: 1.5;
+
+  max-width: 520px;
+}
+
+.lh2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  background: #2d9e5f;
+  color: #fff;
+
+  font-size: .82rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  padding: .9rem 2.2rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  transition: .25s ease;
+}
+
+.lh2-btn:hover {
+  background: #23834c;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   RIGHT / CONTACT CARD
+   ============================================================ */
+
+.lh2-card {
+  background: #eef7ee;
+
+  border-radius: 22px;
+  padding: 2rem;
+  border: 1px solid rgba(45,158,95,.1);
+  margin-bottom: 4rem;
+}
+
+.lh2-card-title {
+  font-size: 1rem;
+  font-weight: 800;
+
+  color: var(--dark);
+
+  margin-bottom: 1.6rem;
+}
+
+.lh2-contact-list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.4rem;
+}
+
+.lh2-contact-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.lh2-contact-icon {
+  width: 42px;
+  height: 42px;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2d9e5f;
+
+  flex-shrink: 0;
+}
+
+.lh2-contact-label {
+  font-size: .8rem;
+  font-weight: 800;
+
+  color: var(--dark);
+
+  margin-bottom: .2rem;
+}
+
+.lh2-contact-value {
+  font-size: .88rem;
+
+  color: var(--mid);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+  #lienhe2 {
+    margin-left: 0;              /* bỏ margin-left desktop */
+    padding: 56px 5vw 0;
+  }
+
+  .lh2-inner { gap: 2rem; }
+
+  /* tiêu đề: xếp dọc, bỏ margin-top lớn */
+  .lh2-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    margin-top: 2rem;
+  }
+
+  .lh2-title       { font-size: 1.5rem; line-height: 1.1; }
+  .lh2-title-brand { font-size: 1.5rem; }
+
+  /* logo + badges nằm ngang */
+  .lh2-logo-wrap {
+    flex-direction: row;
+    align-items: center;
+    gap: .6rem;
+  }
+
+  .lh2-logo-img,
+  .lh2-logo-fallback { width: 56px; height: 56px; font-size: 1.5rem; }
+
+  .lh2-badges   { 
+    
+    margin-top: 0; 
+    flex-direction: column; 
+    gap: .65rem; 
+  }
+  .lh2-badge    { font-size: .58rem; padding: .3rem .7rem; }
+
+  /* bottom: 1 cột */
+  .lh2-bottom   { grid-template-columns: 1fr; gap: 1.8rem; }
+
+  .lh2-sub      { font-size: .9rem; max-width: 100%; }
+  .lh2-btn      { font-size: .78rem; padding: .8rem 1.8rem; }
+
+  /* card: bỏ nền trên mobile */
+  .lh2-card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .lh2-card-title {
+    font-size: .88rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .lh2-contact-list  { gap: 1rem; }
+  .lh2-contact-icon  { width: 34px; height: 34px; border-radius: 8px; }
+  .lh2-contact-label { font-size: .76rem; }
+  .lh2-contact-value { font-size: .8rem; }
+
+  
+}
