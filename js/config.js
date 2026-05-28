@@ -487,7 +487,7 @@ const LIENHE2_DATA = {
   titleLine1: 'Hiện Thực Hoá',
   titleLine2: 'Thương Hiệu Của Bạn Cùng',
   titleLine3: 'DEMETER FOR BUSINESS',
-  logoSrc   : '/public/static/footer/group_14523.png',                          // ← đường dẫn logo tròn
+  logoSrc   : 'public/static/footer/group_14523.png',                          // ← đường dẫn logo tròn
   badges    : ['THIẾT KẾ SÁNG TẠO', 'IN ẤN CHUYÊN NGHIỆP'],
   sub       : 'Trao Đổi Thêm Về Ý Tưởng Của Bạn Và Bắt Đầu Tạo Ra Thương Hiệu Riêng Cho Doanh Nghiệp',
   btnText   : 'BRIEF FORM',
