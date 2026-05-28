@@ -35,7 +35,7 @@ const Gioithieu = (() => {
         <!-- LOGO TRÒN GIỮA DƯỚI -->
         <div class="gt-banner-image reveal">
         <img 
-        src="/public/static/footer/group_14523.png" 
+        src="public/static/footer/group_14523.png" 
         alt="Banner"
         class="gt-banner-img"
                         />

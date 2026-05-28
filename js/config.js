@@ -389,13 +389,13 @@ const KHONGCHITHIETKE_DATA = {
   label  : 'Không Chỉ Thiết Kế',
   title  : 'Chúng Tôi Tạo Ra Thành Phẩm',
   desc   : 'DEMETER FOR BUSINESS cung cấp giải pháp bao bì toàn diện từ khâu thiết kế sáng tạo đến sản xuất thành phẩm. Cùng với đội ngũ thiết kế chuyên nghiệp, chúng tôi sử dụng hệ thống vật tư, máy in chính hãng và liên tục cập nhật các dòng máy in thế hệ mới, cam kết mang đến những thành phẩm bao bì sắc nét và hoàn hảo nhất.',
-  img    : '/public/static/group_14588.png',   // ← ảnh 2 người (PNG nền trong suốt)
+  img    : 'public/static/group_14588.png',   // ← ảnh 2 người (PNG nền trong suốt)
   imgAlt : 'Đội ngũ Demeter for Business',
   features: [
-    { icon: '/public/static/design/group_14584.png', label: 'Thiết kế sáng tạo' },
-    { icon: '/public/static/design/group_14585.png', label: 'Vật tư in ấn chính hãng' },
-    { icon: '/public/static/design/group_14586.png', label: 'Máy in thế hệ mới' },
-    { icon: '/public/static/design/group_14587.png', label: 'Thành phẩm sắc nét' },
+    { icon: 'public/static/design/group_14584.png', label: 'Thiết kế sáng tạo' },
+    { icon: 'public/static/design/group_14585.png', label: 'Vật tư in ấn chính hãng' },
+    { icon: 'public/static/design/group_14586.png', label: 'Máy in thế hệ mới' },
+    { icon: 'public/static/design/group_14587.png', label: 'Thành phẩm sắc nét' },
   ],
 };
 // ============================================================
@@ -409,19 +409,19 @@ const TIEUCHUAN_DATA = {
     {
       num  : '01',
       title: 'THIẾT KẾ CÓ CHIẾN LƯỢC',
-      icon : '/public/static/tieuchuan/group_14552.png',        // ← icon thiết kế
+      icon : 'public/static/tieuchuan/group_14552.png',        // ← icon thiết kế
       desc : 'Một bản thiết kế thành công phải kết hợp hài hòa giữa tính thẩm mỹ và thông điệp thương hiệu. Bố cục, màu sắc và cấu trúc bao bì cần được tính toán kỹ lưỡng để thu hút đúng tệp khách hàng mục tiêu và tạo sự khác biệt, nổi bật trên quầy kệ.',
     },
     {
       num  : '02',
       title: 'CHẤT LIỆU CÓ CHỌN LỌC',
-      icon : '/public/static/tieuchuan/group_14539.png',        // ← icon chất liệu
+      icon : 'public/static/tieuchuan/group_14539.png',        // ← icon chất liệu
       desc : 'Bản thiết kế chỉ thực sự tỏa sáng khi được hiện thực hóa trên chất liệu tương xứng. Việc sử dụng chất liệu kém sẽ làm sai lệch màu sắc và làm giảm trải nghiệm cảm nhận của người tiêu dùng. Lựa chọn chất liệu phù hợp, chất lượng cao là nền tảng bắt buộc.',
     },
     {
       num  : '03',
       title: 'IN ẤN CÓ CÔNG NGHỆ',
-      icon : '/public/static/tieuchuan/group_14551.png',        // ← icon in ấn
+      icon : 'public/static/tieuchuan/group_14551.png',        // ← icon in ấn
       desc : 'Hệ thống máy in quyết định trực tiếp đến độ sắc nét của thành phẩm. Máy in thế hệ mới không chỉ tái tạo màu sắc chuẩn xác, chân thực so với bản và thiết kế mà còn tối ưu hóa tốc độ sản xuất, giúp doanh nghiệp tiết kiệm thời gian.',
     },
   ],
@@ -429,9 +429,9 @@ const TIEUCHUAN_DATA = {
 const HERO2_DATA = {
   titleLine1: 'Giải Pháp Bao Bì Tối Ưu',
   titleLine2: 'Cho Thương Hiệu',
-  logoSrc   : '/public/static/footer/group_14523.png',                           // ← 'static/logo_DMT.png'
+  logoSrc   : 'public/static/footer/group_14523.png',                           // ← 'static/logo_DMT.png'
   badges    : ['THIẾT KẾ SÁNG TẠO', 'IN ẤN CHUYÊN NGHIỆP'],
-  img       : '/public/static/group_14588.png',       // ← PNG nền trong suốt (ảnh 2 người)
+  img       : 'public/static/group_14588.png',       // ← PNG nền trong suốt (ảnh 2 người)
   imgAlt    : 'Đội ngũ Demeter for Business',
   desc      : 'DEMETER FOR BUSINESS là đơn vị chuyên cung cấp giải pháp tổng thể trong lĩnh vực thiết kế, in ấn và hoàn thiện bao bì. Với hệ sinh thái dịch vụ khép kín, chúng tôi giúp doanh nghiệp tối ưu thời gian, chi phí và nâng cao trải nghiệm sản phẩm trên thị trường.\n\nTừ ý tưởng thiết kế, lựa chọn chất liệu, in ấn đến hoàn thiện thành phẩm, DEMETER FOR BUSINESS mang đến một quy trình liên mạch, giúp khách hàng dễ dàng sở hữu những sản phẩm bao bì phù hợp với mục tiêu kinh doanh, ngành hàng và định vị thương hiệu.\n\nVới định hướng phát triển bền vững, chúng tôi luôn theo đuổi giải pháp không chỉ đẹp về hình thức mà còn tối ưu về công năng, chi phí và trải nghiệm sử dụng.',
 };
