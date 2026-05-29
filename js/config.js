@@ -393,7 +393,7 @@ const KHONGCHITHIETKE_DATA = {
   imgAlt : 'Đội ngũ Demeter for Business',
   features: [
     { icon: 'public/static/design/group_14584.png', label: 'Thiết kế sáng tạo' },
-    { icon: 'public/static/design/group_14585.png', label: 'Vật tư in ấn chính hãng' },
+    { icon: 'public/static/design/group_14585.png', label: 'Tối ưu chi phí vật tư' },
     { icon: 'public/static/design/group_14586.png', label: 'Máy in thế hệ mới' },
     { icon: 'public/static/design/group_14587.png', label: 'Thành phẩm sắc nét' },
   ],
@@ -474,7 +474,7 @@ const LOIICH_DATA = {
 const KHAMPHA_DATA = {
   label : 'Khám Phá Các Giải Pháp Tại',
   title : 'DEMETER FOR BUSINESS',
-  img    : 'YOUR_GIOITHIEU_IMAGE.jpg',
+  img    : 'public/static/tieuchuan/dmt_logo_serviecs.jpg',   
   imgAlt : 'Đội ngũ Demeter for Business',
   items : [
     { title: 'Thiết Kế Bao Bì Sáng Tạo',      content: 'Định hướng thiết kế theo ngành hàng, tối ưu nhận diện thương hiệu, giúp sản phẩm nổi bật và dễ ghi nhớ.' },
@@ -493,7 +493,7 @@ const LIENHE2_DATA = {
   btnText   : 'BRIEF FORM',
   btnHref   : 'https://forms.gle/1gFcuP7u9isDf3qEA',
   contacts  : [
-    { icon: 'phone', label: 'Hotline:',  value: '(+84) 903 344 277' },
+    { icon: 'phone', label: 'Hotline:',  value: '(+84) 962 510 180' },
     { icon: 'email', label: 'Email:',    value: 'support@demeter.vn' },
     { icon: 'addr',  label: 'Địa chỉ:', value: 'Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh, Việt Nam' },
   ],

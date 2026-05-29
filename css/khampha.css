@@ -2,15 +2,11 @@
    KHAMPHA.CSS
 ============================================================ */
 
-#khampha {
-  padding: 90px 6vw;
-  background: #f5f5f5;
-}
 
 /* ================= CONTAINER ================= */
 
 .kp-inner {
-  max-width: 1180px;
+  max-width: 1080px;
   margin: 0 auto;
 
   display: grid;
@@ -186,52 +182,16 @@
   aspect-ratio: 1 / 1;
 }
 
-/* nền xám */
 
-.kp-img-wrap::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background: #dcdcdc;
-
-  border-radius: 18px;
-
-  z-index: 1;
-}
-
-/* hình vuông xanh */
-
-.kp-shape {
-  position: absolute;
-
-  width: 110px;
-  height: 110px;
-
-  background: #10a344;
-
-  border-radius: 10px;
-
-  right: -40px;
-  bottom: 40px;
-
-  z-index: 3;
-}
 
 /* ================= IMAGE ================= */
 
 .kp-img {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-
   z-index: 2;
 }
 

@@ -90,8 +90,8 @@ const KhamPha = (() => {
               <div class="kp-shape"></div>
 
               <img
-                src="${KHAMPHA_DATA.image}"
-                alt="${KHAMPHA_DATA.imageAlt}"
+                src="${KHAMPHA_DATA.img}"
+                alt="${KHAMPHA_DATA.imgAlt}"
                 class="kp-img"
                 onerror="this.style.display='none';"
               />
