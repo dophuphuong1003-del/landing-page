@@ -54,6 +54,7 @@
 
   #hero{
     min-height: auto;
+    margin-top: 8px;
   }
 
   .hero-banner{
